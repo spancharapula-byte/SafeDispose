@@ -59,6 +59,36 @@ const catalog = [
     icon: '🪑',
   },
 
+  // Battery subcategories
+  {
+    id: 'alkaline-batteries',
+    parentId: 'batteries',
+    type: 'item',
+    name: 'Alkaline Batteries',
+    icon: '🔋',
+  },
+  {
+    id: 'rechargeable-batteries',
+    parentId: 'batteries',
+    type: 'item',
+    name: 'Rechargeable Batteries',
+    icon: '🔋',
+  },
+  {
+    id: 'lithium-batteries',
+    parentId: 'batteries',
+    type: 'item',
+    name: 'Lithium Batteries',
+    icon: '🔋',
+  },
+  {
+    id: 'car-batteries',
+    parentId: 'batteries',
+    type: 'item',
+    name: 'Car Batteries',
+    icon: '🔋',
+  },
+
   // Lighting subcategories
   {
     id: 'cfl-bulbs',
@@ -75,10 +105,10 @@ const catalog = [
     icon: '💡',
   },
   {
-    id: 'incandescent-bulbs',
+    id: 'incandescent-halogen-bulbs',
     parentId: 'lighting',
     type: 'item',
-    name: 'Incandescent Bulbs',
+    name: 'Incandescent & Halogen Bulbs',
     icon: '💡',
   },
   {
@@ -87,6 +117,200 @@ const catalog = [
     type: 'item',
     name: 'Fluorescent Tubes',
     icon: '💡',
+  },
+
+  // Electronics subcategories
+  {
+    id: 'phones-tablets',
+    parentId: 'electronics',
+    type: 'item',
+    name: 'Phones & Tablets',
+    icon: '📱',
+  },
+  {
+    id: 'laptops-computers',
+    parentId: 'electronics',
+    type: 'item',
+    name: 'Laptops & Computers',
+    icon: '💻',
+  },
+  {
+    id: 'tvs-monitors',
+    parentId: 'electronics',
+    type: 'item',
+    name: 'TVs & Monitors',
+    icon: '📺',
+  },
+  {
+    id: 'cables-accessories',
+    parentId: 'electronics',
+    type: 'item',
+    name: 'Cables & Accessories',
+    icon: '🔌',
+  },
+
+  // Paint/chemical subcategories
+  {
+    id: 'latex-paint',
+    parentId: 'paint-chemicals',
+    type: 'item',
+    name: 'Latex Paint',
+    icon: '🎨',
+  },
+  {
+    id: 'oil-based-paint',
+    parentId: 'paint-chemicals',
+    type: 'item',
+    name: 'Oil-Based Paint',
+    icon: '🎨',
+  },
+  {
+    id: 'cleaning-chemicals',
+    parentId: 'paint-chemicals',
+    type: 'item',
+    name: 'Cleaning Chemicals',
+    icon: '🎨',
+  },
+  {
+    id: 'pesticides-herbicides',
+    parentId: 'paint-chemicals',
+    type: 'item',
+    name: 'Pesticides & Herbicides',
+    icon: '🎨',
+  },
+  {
+    id: 'solvents-adhesives',
+    parentId: 'paint-chemicals',
+    type: 'item',
+    name: 'Solvents & Adhesives',
+    icon: '🎨',
+  },
+
+  // Medicine/needles subcategories
+  {
+    id: 'medication',
+    parentId: 'medicine-needles',
+    type: 'item',
+    name: 'Medication',
+    icon: '💊',
+  },
+  {
+    id: 'needles-syringes',
+    parentId: 'medicine-needles',
+    type: 'item',
+    name: 'Needles & Syringes',
+    icon: '💉',
+  },
+  {
+    id: 'lancets',
+    parentId: 'medicine-needles',
+    type: 'item',
+    name: 'Lancets',
+    icon: '💉',
+  },
+  {
+    id: 'inhalers',
+    parentId: 'medicine-needles',
+    type: 'item',
+    name: 'Inhalers',
+    icon: '💨',
+  },
+
+  // Automotive subcategories
+  {
+    id: 'motor-oil-filters',
+    parentId: 'automotive',
+    type: 'item',
+    name: 'Motor Oil & Filters',
+    icon: '🛢️',
+  },
+  {
+    id: 'antifreeze-coolant',
+    parentId: 'automotive',
+    type: 'item',
+    name: 'Antifreeze & Coolant',
+    icon: '❄️',
+  },
+  {
+    id: 'gasoline-fuel',
+    parentId: 'automotive',
+    type: 'item',
+    name: 'Gasoline & Fuel',
+    icon: '⛽',
+  },
+  {
+    id: 'tires',
+    parentId: 'automotive',
+    type: 'item',
+    name: 'Tires',
+    icon: '🛞',
+  },
+
+  // Appliances subcategories
+  {
+    id: 'refrigerators-freezers',
+    parentId: 'appliances',
+    type: 'item',
+    name: 'Refrigerators & Freezers',
+    icon: '🧊',
+  },
+  {
+    id: 'air-conditioners',
+    parentId: 'appliances',
+    type: 'item',
+    name: 'Air Conditioners',
+    icon: '❄️',
+  },
+  {
+    id: 'washers-dryers',
+    parentId: 'appliances',
+    type: 'item',
+    name: 'Washers & Dryers',
+    icon: '🧺',
+  },
+  {
+    id: 'microwaves-ovens',
+    parentId: 'appliances',
+    type: 'item',
+    name: 'Microwaves & Ovens',
+    icon: '🍳',
+  },
+  {
+    id: 'small-appliances',
+    parentId: 'appliances',
+    type: 'item',
+    name: 'Small Appliances',
+    icon: '🍽️',
+  },
+
+  // Furniture/bulky items subcategories
+  {
+    id: 'couches-sofas',
+    parentId: 'furniture-bulky-items',
+    type: 'item',
+    name: 'Couches & Sofas',
+    icon: '🛋️',
+  },
+  {
+    id: 'chairs-tables',
+    parentId: 'furniture-bulky-items',
+    type: 'item',
+    name: 'Chairs & Tables',
+    icon: '🪑',
+  },
+  {
+    id: 'mattresses',
+    parentId: 'furniture-bulky-items',
+    type: 'item',
+    name: 'Mattresses',
+    icon: '🛏️',
+  },
+  {
+    id: 'carpets-rugs',
+    parentId: 'furniture-bulky-items',
+    type: 'item',
+    name: 'Carpets & Rugs',
+    icon: '🧶',
   }
 ]
 
