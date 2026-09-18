@@ -1,121 +1,120 @@
-import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
 import './App.css'
+import { useState } from 'react'
+
+const categories = [
+  { id: 'batteries', name: 'Batteries', icon: '🔋' },
+  { id: 'electronics', name: 'Electronics', icon: '💻' },
+  { id: 'lighting', name: 'Lighting', icon: '💡' },
+  { id: 'chemicals', name: 'Chemicals', icon: '🧪' },
+  { id: 'medical', name: 'Medical', icon: '💊' },
+  { id: 'automotive', name: 'Automotive', icon: '🚗' },
+]
+
+const itemsByCategory = {
+  lighting: [
+    { id: 'cfl-bulb', name: 'CFL Bulbs', label: 'CFL' },
+    { id: 'fluorescent-tube', name: 'Fluorescent Tubes', label: 'TUBE' },
+    { id: 'led-bulb', name: 'LED Bulbs', label: 'LED' },
+    {
+      id: 'incandescent-halogen',
+      name: 'Incandescent & Halogen',
+      label: 'BULB',
+    },
+  ],
+}
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [selectedCategory, setSelectedCategory] = useState(null)
+
+  if (selectedCategory !== null) {
+  const category = categories.find(
+    (currentCategory) => currentCategory.id === selectedCategory,
+  )
+
+  const items = itemsByCategory[selectedCategory] ?? []
 
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Safe Drop</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
+    <main className="app">
+      <div className="category-topbar">
         <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
+          className="back-button"
+          onClick={() => setSelectedCategory(null)}
         >
-          Count is {count}
+          ← Back
         </button>
-      </section>
 
-      <div className="ticks"></div>
+        <span className="small-logo">SafeDrop</span>
+      </div>
 
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
+      <header className="category-header">
+        <h1 className="category-title">{category.name}</h1>
+
+        <p className="category-description">
+          Choose the type that best matches your item.
+        </p>
+      </header>
+
+      {items.length > 0 ? (
+        <div className="item-grid">
+          {items.map((item) => (
+            <button className="item-card" key={item.id}>
+              <span className="item-label" aria-hidden="true">
+                {item.label}
+              </span>
+
+              <span className="item-name">{item.name}</span>
+            </button>
+          ))}
         </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
+      ) : (
+        <p className="empty-message">
+          Items for this category will be added soon.
+        </p>
+      )}
+    </main>
+  )
+}
+
+  return (
+    <main className="app">
+      <header className="hero">
+        <p className="location-label">Orange County disposal guide</p>
+
+        <h1>SafeDrop</h1>
+
+        <p className="description">
+          Find clear instructions to dispose of everyday items.
+        </p>
+      </header>
+
+      <section className="search-section">
+        <input
+          className="search-input"
+          type="search"
+          placeholder="Search batteries, paint, bulbs..."
+          aria-label="Search for an item"
+        />
+      </section>
+      <section className="categories-section">
+        <h2>Browse categories</h2>
+
+        <div className="category-grid">
+          {categories.map((category) => (
+            <button
+              className="category-card"
+              key={category.id}
+              onClick={() => setSelectedCategory(category.id)}
+            >
+              <span className="category-icon" aria-hidden="true">
+                {category.icon}
+              </span>
+
+              <span className="category-name">{category.name}</span>
+            </button>
+          ))}
         </div>
       </section>
-
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
+    </main>
   )
 }
 
