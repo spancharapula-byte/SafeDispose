@@ -1,114 +1,93 @@
-import './App.css'
-import { useState } from 'react'
+import './App.css';
+import { useState } from 'react';
 
 const categories = [
-  { id: 'batteries', name: 'Batteries', icon: '🔋' },
-  { id: 'electronics', name: 'Electronics', icon: '💻' },
-  { id: 'lighting', name: 'Lighting', icon: '💡' },
-  { id: 'chemicals', name: 'Chemicals', icon: '🧪' },
-  { id: 'medical', name: 'Medical', icon: '💊' },
-  { id: 'automotive', name: 'Automotive', icon: '🚗' },
+  {
+    id: 'batteries',
+    name: 'Batteries',
+    icon: '🔋',
+  },
+  {
+    id: 'light',
+    name: 'Lighting',
+    icon: '💡',
+  },
+  {
+    id: 'electronics',
+    name: 'Electronics',
+    icon: '💻',
+  },
+  {
+    id: 'paint/chemicals',
+    name: 'Paint & Chemicals',
+    icon: '🖌️',
+  },
+  {
+    id: 'medicine/needles',
+    name: 'Medicine & Needles',
+    icon: '💉',
+  },
+  {
+    id: 'Automotive',
+    name: 'Automotive',
+    icon: '🚗',
+  },
+  {
+    id: 'Appliances',
+    name: 'Appliances',
+    icon: '🏠',
+  },
+  {
+    id: 'furniture/bulky items',
+    name: 'Furniture & Bulky Items',
+    icon: '🪑',
+  },
 ]
 
-const itemsByCategory = {
-  lighting: [
-    { id: 'cfl-bulb', name: 'CFL Bulbs', label: 'CFL' },
-    { id: 'fluorescent-tube', name: 'Fluorescent Tubes', label: 'TUBE' },
-    { id: 'led-bulb', name: 'LED Bulbs', label: 'LED' },
-    {
-      id: 'incandescent-halogen',
-      name: 'Incandescent & Halogen',
-      label: 'BULB',
-    },
-  ],
-}
-
 function App() {
-  const [selectedCategory, setSelectedCategory] = useState(null)
+  const [selectedCategory, setSelectedCategory] = useState(null);
+  const selectedCategoryData = categories.find((category) => category.id === selectedCategory);
 
-  if (selectedCategory !== null) {
-  const category = categories.find(
-    (currentCategory) => currentCategory.id === selectedCategory,
-  )
-
-  const items = itemsByCategory[selectedCategory] ?? []
-
-  return (
-    <main className="app">
-      <div className="category-topbar">
-        <button
-          className="back-button"
-          onClick={() => setSelectedCategory(null)}
-        >
-          ← Back
+  if (selectedCategoryData) {
+    return (
+      <main className="app">
+        <button className="back" type="button" onClick={() => setSelectedCategory(null)}>
+          ← Disposal Categories
         </button>
 
-        <span className="small-logo">SafeDrop</span>
-      </div>
-
-      <header className="category-header">
-        <h1 className="category-title">{category.name}</h1>
-
-        <p className="category-description">
-          Choose the type that best matches your item.
-        </p>
-      </header>
-
-      {items.length > 0 ? (
-        <div className="item-grid">
-          {items.map((item) => (
-            <button className="item-card" key={item.id}>
-              <span className="item-label" aria-hidden="true">
-                {item.label}
-              </span>
-
-              <span className="item-name">{item.name}</span>
-            </button>
-          ))}
-        </div>
-      ) : (
-        <p className="empty-message">
-          Items for this category will be added soon.
-        </p>
-      )}
-    </main>
-  )
-}
+        <header className="category-header">
+          <h1>{selectedCategoryData.name}</h1>
+          <p className="description">Choose the item that best matches what you want to dispose of.</p>
+        </header>
+      </main>
+    )
+  }
 
   return (
     <main className="app">
       <header className="hero">
-        <p className="location-label">Orange County disposal guide</p>
-
-        <h1>SafeDrop</h1>
-
+        <p className="guide">Orange County disposal guide</p>
+        <h1>SafeDispose</h1>
         <p className="description">
-          Find clear instructions to dispose of everyday items.
+          Find clear instructions on how to safely dispose your everyday items.
         </p>
       </header>
 
-      <section className="search-section">
+      <section className="search">
         <input
-          className="search-input"
-          type="search"
-          placeholder="Search batteries, paint, bulbs..."
-          aria-label="Search for an item"
+        className="search-input"
+        type="search"
+        placeholder="Batteries, lightbulbs, paint..."
+        aria-label="Search for items to dispose"
         />
       </section>
-      <section className="categories-section">
-        <h2>Browse categories</h2>
-
+      
+      <section className="categories">
+        <h2>Browse by category</h2>
         <div className="category-grid">
           {categories.map((category) => (
-            <button
-              className="category-card"
-              key={category.id}
-              onClick={() => setSelectedCategory(category.id)}
-            >
-              <span className="category-icon" aria-hidden="true">
-                {category.icon}
-              </span>
-
+            <button className="category-button" type="button" key={category.id} onClick={() => setSelectedCategory(category.id)}>
+              <span className="category-icon" aria-hidden="true">{category.icon}</span>
               <span className="category-name">{category.name}</span>
             </button>
           ))}
