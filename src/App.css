@@ -144,3 +144,49 @@ h1 {
   font-weight: 650;
   cursor: pointer;
 }
+.item-header {
+  margin: 12px 0 32px;
+}
+
+.safety-box {
+  margin-top: 36px;
+  padding: 22px 26px;
+  background: #f3e3dc;
+  border: 1px solid #c58a73;
+  border-radius: 18px;
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.safety-box:hover {
+  transform: scale(0.99);
+  box-shadow: 0 8px 20px rgb(100 55 40 / 8%);
+}
+
+.safety-box h2 {
+  margin-top: 0;
+}
+
+.safety-box p {
+  margin-bottom: 0;
+}
+
+.safety-box h2 {
+  margin-top: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.category-icon svg {
+  width: 52px;
+  height: 52px;
+  stroke-width: 1.8;
+}
+
+.safety-icon {
+  width: 30px;
+  height: 30px;
+  color: #d8b818;
+  stroke-width: 2.2;
+  flex-shrink: 0;
+}
