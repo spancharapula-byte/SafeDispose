@@ -190,3 +190,35 @@ h1 {
   stroke-width: 2.2;
   flex-shrink: 0;
 }
+
+.source-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding: 10px 14px;
+
+  color: #245b40;
+  background: #eef4ec;
+  border: 1px solid #dce6dd;
+  border-radius: 10px;
+
+  font-weight: 650;
+  text-decoration: none;
+
+  transition:
+    transform 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.source-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgb(24 57 45 / 10%);
+}
+
+.source-button svg {
+  width: 16px;
+  height: 16px;
+}

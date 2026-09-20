@@ -33,7 +33,9 @@ import {
   RockingChair,
   RectangleHorizontal,
   CarBattery,
-  TriangleAlert
+  TriangleAlert,
+  ExternalLink,
+  Gamepad2,
 } from 'lucide-react';
 
 const catalog = [
@@ -96,23 +98,34 @@ const catalog = [
 
   // Battery subcategories
   {
-    id: 'alkaline-batteries',
+    id: 'single-use-batteries',
     parentId: 'batteries',
     type: 'item',
-    name: 'Alkaline Batteries',
+    name: 'Single-Use Batteries',
     icon: BatteryMedium,
 
-    summary: 'Do not place alkaline batteries in the trash or curbside recycling. Take them to an approved battery recycling location.',
+    summary: 'Do not place single-use batteries in the trash or curbside recycling. Take them to an approved battery recycling location, retailer, or hazardous waste collector.',
     instructions: [
-      'Tape the ends of the batteries/battery terminals with non-conductive tape (e.g., electrical tape) to prevent short-circuiting.',
-      'Place the batteries in a clear plastic bag or a container that can be sealed, and keep them separate during transport.',
-      'Take the batteries to an approved battery recycling location.',
+      'Store the batteries in a cool, safe, dry place away from children and other flammable materials until recycled.',
+      'For extra safety, tape the ends of the batteries with non-conductive or electrical tape to prevent short-circuiting.',
+      'Take the batteries to an approved battery collection/recycling location.',
     ],
 
-    safetyNote: 'Keep damaged or leaking batteries away from skin and eyes, and keep them seperate from other batteries.',
+    safetyNote: 'Even used batteries can retain energy. Keep them in a safe, dry place away from children and other flammable materials. Keep damaged or leaking batteries away from skin and eyes, and keep them separate from other batteries.',
     sources:
     [
-      '...'
+      {
+        name: 'California DTSC',
+        url: 'https://dtsc.ca.gov/universalwaste/universal-waste-for-residents-batteries/',
+      },
+      {
+        name: 'U.S. EPA - Used Household Batteries',
+        url: 'https://www.epa.gov/recycle/used-household-batteries',
+      },
+      {
+        name: 'CalRecycle',
+        url: 'https://calrecycle.ca.gov/HomeHazWaste/Info/',
+      }
     ]
   },
   {
@@ -121,27 +134,111 @@ const catalog = [
     type: 'item',
     name: 'Rechargeable Batteries',
     icon: BatteryCharging,
+
+    summary: 'Do not place rechargeable batteries in the trash or curbside recycling. Take them to an approved battery recycling location, retailer, or hazardous waste collector.',
+    instructions: [
+      'Remove the batteries from devices if it is designed to be safely removed.',
+      'Place each battery in a separate plastic bag or tape the ends of the batteries with clear or electrical tape to prevent short-circuiting.',
+      'Take the batteries to an approved battery collector/recycler, retailer, or hazardous waste collector.',
+    ],
+
+    safetyNote: 'Rechargeable batteries may still retain enough energy to cause a fire or injury. Do not damage, crush, puncture, or improperly remove batteries from a device.',
+    sources:
+    [
+      {
+        name: 'U.S. EPA - Used Household Batteries',
+        url: 'https://www.epa.gov/recycle/used-household-batteries',
+      },
+      {
+        name: 'California DTSC - Batteries',
+        url: 'https://dtsc.ca.gov/universalwaste/universal-waste-for-residents-batteries/',
+      }
+    ]
   },
   {
-    id: 'lithium-batteries',
+    id: 'lithium-ion-batteries',
     parentId: 'batteries',
     type: 'item',
-    name: 'Lithium Batteries',
+    name: 'Lithium-Ion Batteries',
     icon: BatteryFull,
+
+    summary: 'Do not place lithium-ion batteries in the trash or curbside recycling. Take them to an approved battery recycling location, retailer, or hazardous waste collector.',
+    instructions: [
+      'Remove the batteries from devices if it is designed to be safely removed.',
+      'Place each battery in a separate plastic bag or tape the ends of the batteries with clear or electrical tape to prevent short-circuiting.',
+      'Take the batteries to an approved battery collector/recycler, retailer, or hazardous waste collector.',
+    ],
+
+    safetyNote: 'Lithium-ion batteries can cause fires if damaged or short-circuited. Do not crush, bend, puncture, or improperly remove them from a device. If a battery is damaged or leaking, contact the battery/device manufacturer for specific instructions.',
+    sources:
+    [
+      {
+        name: 'U.S. EPA - Lithium-Ion Batteries',
+        url: 'https://www.epa.gov/recycle/used-lithium-ion-batteries',
+      },
+      {
+        name: 'California DTSC - Batteries',
+        url: 'https://dtsc.ca.gov/universalwaste/universal-waste-for-residents-batteries/',
+      }
+    ]
   },
   {
-    id: 'button-coin-cell-batteries',
+    id: 'button-coin-batteries',
     parentId: 'batteries',
     type: 'item',
-    name: 'Button & Coin Cell Batteries',
+    name: 'Button & Coin Batteries',
     icon: Circle,
+
+    summary: 'Do not place button or coin batteries in the trash or curbside recycling. Take them to an approved battery recycling location, retailer, or hazardous waste collector.',
+    instructions: [
+      'Remove the batteries from devices if it is designed to be safely removed.',
+      'Cover the battery terminals or the entire battery with clear or electrical tape to prevent short-circuiting.',
+      'Take the batteries to an approved battery collector/recycler, retailer, or hazardous waste collector.',
+    ],
+
+    safetyNote: 'Button and coin batteries can cause severe injuries if swallowed. Keep them away from children. If one is swallowed, seek medical attention immediately.',
+    sources:
+    [
+      {
+        name: 'U.S. CPSC - Button & Coin Batteries',
+        url: 'https://www.cpsc.gov/Safety-Education/Safety-Education-Centers/Button-Cell-Coin-Battery-Information-Center',
+      },
+      {
+        name: 'U.S. EPA - Used Household Batteries',
+        url: 'https://www.epa.gov/recycle/used-household-batteries',
+      },
+      {
+        name: 'California DTSC - Batteries',
+        url: 'https://dtsc.ca.gov/universalwaste/universal-waste-for-residents-batteries/',
+      }
+    ]
   },
   {
     id: 'car-batteries',
     parentId: 'batteries',
     type: 'item',
     name: 'Car Batteries',
-    icon: Battery,
+    icon: CarBattery,
+
+    summary: 'Do not place car batteries in the trash or curbside recycling. Take them to an approved battery recycling location, retailer, or hazardous waste collector.',
+    instructions: [
+      'Keep the battery intact and undamaged if possible, and follow all handling instructions provided on the battery.',
+      'Return the used battery to the retailer for recycling if purchasing a new one.',
+      'If you are not purchasing a new battery, contact a local battery retailer or collector for proper disposal and to confirm it accepts used car batteries for recycling.',
+    ],
+
+    safetyNote: 'Car batteries contain lead and sulfuric acid. Do not crush, bend, puncture, or open the battery, and follow all handling instructions provided on the battery.',
+    sources:
+    [
+      {
+        name: 'California DTSC - Lead-Acid Batteries',
+        url: 'https://dtsc.ca.gov/management-of-spent-lead-acid-batteries/',
+      },
+      {
+        name: 'U.S. EPA - Used Household Batteries',
+        url: 'https://www.epa.gov/recycle/used-household-batteries',
+      }
+    ]
   },
 
   // Lighting subcategories
@@ -151,6 +248,26 @@ const catalog = [
     type: 'item',
     name: 'CFL Bulbs',
     icon: Lightbulb,
+
+    summary: 'Do not place CFL bulbs in the trash or curbside recycling. Take them to an approved recycling location, retailer, or hazardous waste collector.',
+    instructions: [
+      'Keep the bulb intact and undamaged if possible, and handle carefully to prevent breakage.',
+      'Store the bulb in a safe, dry place away from children and hazardous materials until recycled.',
+      'Take the CFL bulbs to an approved collector/recycler, retailer, or hazardous waste collector that accepts fluorescent bulbs.',
+    ],
+
+    safetyNote: 'CFL bulbs contain small amounts of mercury. Do not break them, and if one breaks, keep people away from the area, ventilate the room, and follow official cleanup guidance.',
+    sources:
+    [
+      {
+        name: 'California DTSC - Fluorescent Lamps',
+        url: 'https://dtsc.ca.gov/universalwaste/universal-waste-for-residents-fluorescent-lamps/',
+      },
+      {
+        name: 'U.S. EPA - Broken CFL Cleanup',
+        url: 'https://www.epa.gov/mercury/cleaning-broken-cfl',
+      }
+    ]
   },
   {
     id: 'led-bulbs',
@@ -158,20 +275,80 @@ const catalog = [
     type: 'item',
     name: 'LED Bulbs',
     icon: Lightbulb,
+
+    summary: 'Do not place LED bulbs in the trash or curbside recycling. Take them to an approved recycling location, retailer, or hazardous waste collector.',
+    instructions: [
+      'Keep the bulb intact and undamaged if possible, and handle carefully to prevent breakage.',
+      'Do not place LED bulbs in the trash or curbside recycling.',
+      'Take the LED bulbs to an approved collector/recycler, retailer, or hazardous waste collector that accepts LED lights.',
+    ],
+
+    safetyNote: 'LED bulbs can contain small amounts of hazardous materials. Do not break them, puncture, or crush them before recycling.',
+    sources:
+    [
+      {
+        name: 'CalRecycle - Waste Banned From Trash',
+        url: 'https://calrecycle.ca.gov/HomeHazWaste/Info/',
+      },
+      {
+        name: 'California DTSC - Household Hazardous Waste',
+        url: 'https://dtsc.ca.gov/households-and-hazardous-waste/',
+      }
+    ]
   },
   {
     id: 'incandescent-halogen-bulbs',
     parentId: 'lighting',
     type: 'item',
     name: 'Incandescent & Halogen Bulbs',
-    icon: LampDesk,
+    icon: Lightbulb,
+
+    summary: 'Incandescent and halogen bulbs can generally be placed in the household trash. Do not place them in curbside recycling, however.',
+    instructions: [
+      'Make sure the bulbs are completely cool before handling.',
+      'Wrap the bulbs in materials such as paper or newspaper or place them in protective packaging to ensure the glass does not break.',
+      'Place the protected bulbs in your household trash, not the curbside recycling.',
+    ],
+
+    safetyNote: 'These bulbs are made of fragile glass and can break easily. Handle them with care and protect broken bulbs properly to prevent injury.',
+    sources:
+    [
+      {
+        name: 'OC Waste & Recycling - Light Bulbs',
+        url: 'https://oclandfills.com/news/quick-guide-disposing-light-bulbs',
+      },
+    ]
   },
   {
     id: 'fluorescent-tubes',
     parentId: 'lighting',
     type: 'item',
     name: 'Fluorescent Tubes',
-    icon: LampDesk,
+    icon: Lightbulb,
+
+    summary: 'Do not place fluorescent tubes in the trash or curbside recycling. Take them to an appropriate recycling location, retailer, or hazardous waste collector.',
+    instructions: [
+      'Keep the tube intact and undamaged if possible, and handle carefully to prevent breakage.',
+      'Store the tube in a safe, dry place away from children and hazardous materials until recycled.',
+      'Take the fluorescent tubes to an approved collector/recycler, retailer, or hazardous waste collector that accepts fluorescent lamps.',
+    ],
+
+    safetyNote: 'Fluorescent tubes contain small amounts of mercury. Do not break them, and if one breaks, keep people away from the area, ventilate the room, and follow official cleanup guidance.',
+    sources:
+    [
+      {
+        name: 'California DTSC - Fluorescent Lamps',
+        url: 'https://dtsc.ca.gov/universalwaste/universal-waste-for-residents-fluorescent-lamps/',
+      },
+      {
+        name: 'California DTSC - Lamp Disposal Guide',
+        url: 'https://dtsc.ca.gov/fluorescent-tubes-in-the-trash/',
+      },
+      {
+        name: 'U.S. EPA - Broken CFL Cleanup',
+        url: 'https://www.epa.gov/mercury/cleaning-broken-cfl',
+      },
+    ]
   },
 
   // Electronics subcategories
@@ -181,6 +358,26 @@ const catalog = [
     type: 'item',
     name: 'Phones & Tablets',
     icon: Smartphone,
+
+    summary: 'Do not place phones or tablets in the trash or curbside recycling. Take them to an approved recycling location, retailer, or e-waste collector.',
+    instructions: [
+      'Back up any important data from the device, sign out of all your accounts, and erase all personal data from the device.',
+      'Keep the device intact and undamaged if possible, and do not crush, puncture, open, or damage it before recycling.',
+      'Take the device to an authorized e-waste collector/recycler, retailer, or hazardous waste collector that accepts electronic waste.',
+    ],
+
+    safetyNote: 'Many phones and tablets can contain lithium-ion batteries that can cause fires if damaged. Do not crush, bend, or tamper with a device, and do not try to forcefully remove a battery that isn\'t intended to be removed.',
+    sources:
+    [
+      {
+        name: 'California DTSC - Electronic Waste',
+        url: 'https://dtsc.ca.gov/electronic-hazardous-waste/',
+      },
+      {
+        name: 'CalRecycle - Electronic Waste',
+        url: 'https://calrecycle.ca.gov/electronics/',
+      }
+    ]
   },
   {
     id: 'laptops-computers',
@@ -188,6 +385,26 @@ const catalog = [
     type: 'item',
     name: 'Laptops & Computers',
     icon: Laptop,
+
+    summary: 'Do not place laptops or computers in the trash or curbside recycling. Take them to an approved recycling location, retailer, or e-waste collector.',
+    instructions: [
+      'Back up any important data from the device, sign out of all your accounts, and erase all personal data from the device.',
+      'Keep the device intact and undamaged if possible, and do not crush, puncture, open, or damage it before recycling.',
+      'Take the device to an authorized e-waste collector/recycler, retailer, or hazardous waste collector that accepts electronic waste.',
+    ],
+
+    safetyNote: 'Many laptops and computers can contain lithium-ion batteries that can cause fires if damaged. Do not crush, bend, or tamper with a device, and do not try to forcefully remove a battery that isn\'t intended to be removed.',
+    sources:
+    [
+      {
+        name: 'California DTSC - Electronic Waste',
+        url: 'https://dtsc.ca.gov/electronic-hazardous-waste/',
+      },
+      {
+        name: 'CalRecycle - Electronic Waste',
+        url: 'https://calrecycle.ca.gov/electronics/',
+      }
+    ]
   },
   {
     id: 'tvs-monitors',
@@ -195,13 +412,81 @@ const catalog = [
     type: 'item',
     name: 'TVs & Monitors',
     icon: Monitor,
+
+    summary: 'Do not place TVs or monitors in the trash or curbside recycling. Take them to an approved recycling location, retailer, or e-waste collector.',
+    instructions: [
+      'Keep the TV or monitor intact and undamaged if possible, and do not crush, puncture, open, or damage it before recycling.',
+      'Take the device to an authorized e-waste collector/recycler, retailer, or hazardous waste collector that accepts electronic waste.',
+    ],
+
+    safetyNote: 'TVs and monitors can contain hazardous materials such as lead and mercury. Do not crush, bend, or tamper with it before recycling.',
+    sources:
+    [
+      {
+        name: 'California DTSC - Electronic Waste',
+        url: 'https://dtsc.ca.gov/electronic-hazardous-waste/',
+      },
+      {
+        name: 'CalRecycle - Covered Electronic Waste',
+        url: 'https://calrecycle.ca.gov/electronics/cew/',
+      }
+    ]
   },
   {
-    id: 'cables-accessories',
+    id: 'cables-chargers',
     parentId: 'electronics',
     type: 'item',
-    name: 'Cables & Accessories',
+    name: 'Cables & Chargers',
     icon: Cable,
+
+    summary: 'Do not place cables or chargers in curbside recycling. Take them to an approved recycling location, retailer, or e-waste collector.',
+    instructions: [
+      'Keep the item intact and undamaged if possible, and do not puncture, open, or damage it before recycling.',
+      'Take the cables and chargers to an authorized e-waste collector/recycler or retailer that accepts them.',
+    ],
+
+    safetyNote: 'Damaged/broken chargers and power adapters can pose electrical hazards. Do not use a charger with exposed wires, damaged insulation.',
+    sources:
+    [
+      {
+        name: 'California DTSC - Electronic Waste',
+        url: 'https://dtsc.ca.gov/electronic-hazardous-waste/',
+      },
+      {
+        name: 'CalRecycle - Electronic Waste',
+        url: 'https://calrecycle.ca.gov/electronics/',
+      }
+    ]
+  },
+  {
+    id: 'small-electronics-accessories',
+    parentId: 'electronics',
+    type: 'item',
+    name: 'Small Electronics & Accessories',
+    icon: Gamepad2,
+
+    summary: 'Do not place small electronics in the trash or curbside recycling. Take them to an approved recycling location, retailer, or e-waste collector.',
+    instructions: [
+      'Keep the item intact and undamaged if possible, and do not crush, puncture, open, or damage it before recycling.',
+      'Take the item to an authorized e-waste collector/recycler, retailer, or hazardous waste collector that accepts electronic waste.',
+    ],
+
+    safetyNote: 'Some small electronics and accessories can contain lithium-ion batteries that can cause fires if damaged. Do not crush, bend, or tamper with a device, and do not try to forcefully remove a battery that isn\'t intended to be removed.',
+    sources:
+    [
+      {
+        name: 'California DTSC - Electronic Waste',
+        url: 'https://dtsc.ca.gov/electronic-hazardous-waste/',
+      },
+      {
+        name: 'CalRecycle - Electronic Waste',
+        url: 'https://calrecycle.ca.gov/electronics/',
+      },
+      {
+        name: 'CalRecycle - Battery-Embedded Products',
+        url: 'https://calrecycle.ca.gov/electronics/embeddedbatteries/',
+      }
+    ]
   },
 
   // Paint/chemical subcategories
@@ -400,9 +685,14 @@ function App() {
           </div>
 
           <h2>Sources</h2>
-          {currentEntry.sources?.map((source) => (<a key={source.url} href={source.url} 
-          target="_blank" rel="noreferrer">
+          {currentEntry.sources?.map((source) => (<a 
+          className='source-button'
+          key={source.url} 
+          href={source.url} 
+          target="_blank" 
+          rel="noreferrer">
             {source.name}
+            <ExternalLink aria-hidden="true" />
           </a>))}
 
         </header>
