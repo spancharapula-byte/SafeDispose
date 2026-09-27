@@ -45,6 +45,9 @@ const catalog = [
     type: 'category',
     name: 'Batteries',
     icon: Battery,
+    aliases: [
+      'battery'
+    ]
   },
   {
     id: 'lighting',
@@ -52,6 +55,13 @@ const catalog = [
     type: 'category',
     name: 'Lighting',
     icon: Lightbulb,
+    aliases: [
+      'lights',
+      'light bulb',
+      'light bulbs',
+      'lamp',
+      'lamps'
+    ]
   },
   {
     id: 'electronics',
@@ -59,6 +69,12 @@ const catalog = [
     type: 'category',
     name: 'Electronics',
     icon: Laptop,
+    aliases: [
+      'e-waste',
+      'ewaste',
+      'technology',
+      'devices'
+    ]
   },
   {
     id: 'paint-chemicals',
@@ -73,6 +89,12 @@ const catalog = [
     type: 'category',
     name: 'Medicine & Needles',
     icon: Syringe,
+    aliases: [
+      'drugs',
+      'drug',
+      'medical',
+      'sharps'
+    ]
   },
   {
     id: 'automotive',
@@ -80,6 +102,13 @@ const catalog = [
     type: 'category',
     name: 'Automotive',
     icon: Car,
+    aliases: [
+      'vehicle',
+      'vehicles',
+      'automotive',
+      'auto',
+      'garage'
+    ]
   },
   {
     id: 'appliances',
@@ -87,6 +116,10 @@ const catalog = [
     type: 'category',
     name: 'Appliances',
     icon: Refrigerator,
+    aliases: [
+      'household',
+      'large appliances',
+    ]
   },
   {
     id: 'furniture-bulky-items',
@@ -94,6 +127,12 @@ const catalog = [
     type: 'category',
     name: 'Furniture & Bulky Items',
     icon: Armchair,
+    aliases: [
+      'large items',
+      'large furniture',
+      'oversized items',
+      'oversized furniture'
+    ]
   },
 
   // Battery subcategories
@@ -126,7 +165,21 @@ const catalog = [
         name: 'CalRecycle',
         url: 'https://calrecycle.ca.gov/HomeHazWaste/Info/',
       }
-    ]
+    ],
+
+    aliases: [
+      'single use battery',
+      'alkaline battery',
+      'alkaline batteries',
+      'disposable battery',
+      'disposable batteries',
+      'aa battery',
+      'aaa battery',
+      'c battery',
+      'd battery',
+      '9v battery',
+      '9 volt battery',
+    ],
   },
   {
     id: 'rechargeable-batteries',
@@ -153,7 +206,16 @@ const catalog = [
         name: 'California DTSC - Batteries',
         url: 'https://dtsc.ca.gov/universalwaste/universal-waste-for-residents-batteries/',
       }
-    ]
+    ],
+    aliases: [
+  'rechargeable battery',
+  'nimh battery',
+  'nickel metal hydride battery',
+  'nicd battery',
+  'nickel cadmium battery',
+  'rechargeable aa battery',
+  'rechargeable aaa battery',
+]
   },
   {
     id: 'lithium-ion-batteries',
@@ -180,7 +242,16 @@ const catalog = [
         name: 'California DTSC - Batteries',
         url: 'https://dtsc.ca.gov/universalwaste/universal-waste-for-residents-batteries/',
       }
-    ]
+    ],
+    aliases: [
+  'lithium battery',
+  'lithium ion battery',
+  'li-ion battery',
+  'li ion battery',
+  'rechargeable lithium battery',
+  'phone battery',
+  'laptop battery',
+],
   },
   {
     id: 'button-coin-batteries',
@@ -211,7 +282,16 @@ const catalog = [
         name: 'California DTSC - Batteries',
         url: 'https://dtsc.ca.gov/universalwaste/universal-waste-for-residents-batteries/',
       }
-    ]
+    ],
+    aliases: [
+  'button battery',
+  'button cell',
+  'coin battery',
+  'coin cell',
+  'watch battery',
+  'hearing aid battery',
+  'small round battery',
+],
   },
   {
     id: 'car-batteries',
@@ -238,7 +318,16 @@ const catalog = [
         name: 'U.S. EPA - Used Household Batteries',
         url: 'https://www.epa.gov/recycle/used-household-batteries',
       }
-    ]
+    ],
+    aliases: [
+  'car battery',
+  'vehicle battery',
+  'automotive battery',
+  'auto battery',
+  'lead acid battery',
+  'lead-acid battery',
+  'starter battery',
+],
   },
 
   // Lighting subcategories
@@ -267,7 +356,15 @@ const catalog = [
         name: 'U.S. EPA - Broken CFL Cleanup',
         url: 'https://www.epa.gov/mercury/cleaning-broken-cfl',
       }
-    ]
+    ],
+    aliases: [
+  'cfl bulb',
+  'compact fluorescent bulb',
+  'compact fluorescent lamp',
+  'spiral bulb',
+  'curly bulb',
+  'energy saving bulb',
+],
   },
   {
     id: 'led-bulbs',
@@ -294,7 +391,14 @@ const catalog = [
         name: 'California DTSC - Household Hazardous Waste',
         url: 'https://dtsc.ca.gov/households-and-hazardous-waste/',
       }
-    ]
+    ],
+    aliases: [
+  'led bulb',
+  'led light',
+  'led lamp',
+  'light emitting diode bulb',
+  'energy efficient bulb',
+],
   },
   {
     id: 'incandescent-halogen-bulbs',
@@ -317,7 +421,14 @@ const catalog = [
         name: 'OC Waste & Recycling - Light Bulbs',
         url: 'https://oclandfills.com/news/quick-guide-disposing-light-bulbs',
       },
-    ]
+    ],
+    aliases: [
+  'incandescent bulb',
+  'halogen bulb',
+  'traditional light bulb',
+  'filament bulb',
+  'old light bulb',
+],
   },
   {
     id: 'fluorescent-tubes',
@@ -348,7 +459,15 @@ const catalog = [
         name: 'U.S. EPA - Broken CFL Cleanup',
         url: 'https://www.epa.gov/mercury/cleaning-broken-cfl',
       },
-    ]
+    ],
+    aliases: [
+  'fluorescent tube',
+  'fluorescent lamp',
+  'fluorescent light',
+  'tube light',
+  'long light bulb',
+  'shop light tube',
+],
   },
 
   // Electronics subcategories
@@ -377,7 +496,18 @@ const catalog = [
         name: 'CalRecycle - Electronic Waste',
         url: 'https://calrecycle.ca.gov/electronics/',
       }
-    ]
+    ],
+    aliases: [
+  'phone',
+  'cell phone',
+  'cellphone',
+  'mobile phone',
+  'smartphone',
+  'iphone',
+  'tablet',
+  'ipad',
+  'android phone',
+],
   },
   {
     id: 'laptops-computers',
@@ -404,7 +534,16 @@ const catalog = [
         name: 'CalRecycle - Electronic Waste',
         url: 'https://calrecycle.ca.gov/electronics/',
       }
-    ]
+    ],
+    aliases: [
+  'laptop',
+  'computer',
+  'desktop computer',
+  'desktop',
+  'pc',
+  'chromebook',
+  'macbook',
+],
   },
   {
     id: 'tvs-monitors',
@@ -430,7 +569,16 @@ const catalog = [
         name: 'CalRecycle - Covered Electronic Waste',
         url: 'https://calrecycle.ca.gov/electronics/cew/',
       }
-    ]
+    ],
+    aliases: [
+  'tv',
+  'television',
+  'monitor',
+  'computer monitor',
+  'computer screen',
+  'display',
+  'flat screen',
+],
   },
   {
     id: 'cables-chargers',
@@ -456,7 +604,19 @@ const catalog = [
         name: 'CalRecycle - Electronic Waste',
         url: 'https://calrecycle.ca.gov/electronics/',
       }
-    ]
+    ],
+    aliases: [
+  'cable',
+  'charger',
+  'charging cable',
+  'phone charger',
+  'laptop charger',
+  'power cable',
+  'power cord',
+  'power adapter',
+  'electrical cord',
+  'wire',
+],
   },
   {
     id: 'small-electronics-accessories',
@@ -486,7 +646,19 @@ const catalog = [
         name: 'CalRecycle - Battery-Embedded Products',
         url: 'https://calrecycle.ca.gov/electronics/embeddedbatteries/',
       }
-    ]
+    ],
+    aliases: [
+  'small electronic',
+  'electronic accessory',
+  'headphones',
+  'earbuds',
+  'keyboard',
+  'computer mouse',
+  'remote control',
+  'game controller',
+  'speaker',
+  'smartwatch',
+],
   },
 
   // Paint/chemical subcategories
@@ -496,6 +668,37 @@ const catalog = [
     type: 'item',
     name: 'Latex Paint',
     icon: PaintBucket,
+
+    summary: 'Do not place latex paint in the trash, curbside recycling, or down the drain. Take it to an approved recycling location, paint drop-off site, or hazardous waste collector.',
+    instructions: [
+      'Keep the paint in its original container with the lid tightly sealed.',
+      'Take the leftover paint to a PaintCare site or hazardous waste collection center that accepts paint.',
+    ],
+
+    safetyNote: 'Do not intentionally dry out leftover paint for easier disposal in the trash, as this can create a hazard and is not environmentally safe.',
+    sources: 
+    [
+      {
+        name: 'CalRecycle - Paint Management',
+        url: 'https://calrecycle.ca.gov/Paint/',
+      },
+      {
+        name: 'OC Waste & Recycling - Household Hazardous Waste',
+        url: 'https://oclandfills.com/hazardous-waste',
+      },
+      {
+        name: 'PaintCare - California Paint Recycling',
+        url: 'https://www.paintcare.org/states/california/',
+      },
+    ],
+    aliases: [
+  'latex paint',
+  'water based paint',
+  'water-based paint',
+  'interior wall paint',
+  'exterior wall paint',
+  'house paint',
+],
   },
   {
     id: 'oil-based-paint',
@@ -503,6 +706,38 @@ const catalog = [
     type: 'item',
     name: 'Oil-Based Paint',
     icon: PaintBucket,
+
+    summary: 'Do not place latex paint in the trash, curbside recycling, or down the drain. Take it to an approved recycling location, paint drop-off site, or hazardous waste collector.',
+    instructions: [
+      'Keep the paint in its original container with the lid tightly sealed.',
+      'Take the leftover paint to a PaintCare site or hazardous waste collection center that accepts paint.',
+    ],
+
+    safetyNote: 'Do not intentionally dry out leftover paint for easier disposal in the trash, as this can create a hazard and is not environmentally safe.',
+    sources: 
+    [
+      {
+        name: 'CalRecycle - Paint Management',
+        url: 'https://calrecycle.ca.gov/Paint/',
+      },
+      {
+        name: 'OC Waste & Recycling - Household Hazardous Waste',
+        url: 'https://oclandfills.com/hazardous-waste',
+      },
+      {
+        name: 'PaintCare - California Paint Recycling',
+        url: 'https://www.paintcare.org/states/california/',
+      },
+    ],
+    aliases: [
+  'oil paint',
+  'oil based paint',
+  'oil-based paint',
+  'alkyd paint',
+  'solvent based paint',
+  'solvent-based paint',
+  'enamel paint',
+],
   },
   {
     id: 'cleaning-chemicals',
@@ -510,6 +745,39 @@ const catalog = [
     type: 'item',
     name: 'Cleaning Chemicals',
     icon: SprayCan,
+
+    summary: 'Do not place latex paint in the trash, curbside recycling, or down the drain. Take it to an approved recycling location, paint drop-off site, or hazardous waste collector.',
+    instructions: [
+      'Keep the paint in its original container with the lid tightly sealed.',
+      'Take the leftover paint to a PaintCare site or hazardous waste collection center that accepts paint.',
+    ],
+
+    safetyNote: 'Do not intentionally dry out leftover paint for easier disposal in the trash, as this can create a hazard and is not environmentally safe.',
+    sources: 
+    [
+      {
+        name: 'CalRecycle - Paint Management',
+        url: 'https://calrecycle.ca.gov/Paint/',
+      },
+      {
+        name: 'OC Waste & Recycling - Household Hazardous Waste',
+        url: 'https://oclandfills.com/hazardous-waste',
+      },
+      {
+        name: 'PaintCare - California Paint Recycling',
+        url: 'https://www.paintcare.org/states/california/',
+      },
+    ],
+    aliases: [
+  'cleaning chemical',
+  'household cleaner',
+  'cleaning product',
+  'bleach',
+  'ammonia',
+  'drain cleaner',
+  'oven cleaner',
+  'disinfectant',
+],
   },
   {
     id: 'pesticides-herbicides',
@@ -517,6 +785,39 @@ const catalog = [
     type: 'item',
     name: 'Pesticides & Herbicides',
     icon: FlaskConical,
+
+    summary: 'Do not place latex paint in the trash, curbside recycling, or down the drain. Take it to an approved recycling location, paint drop-off site, or hazardous waste collector.',
+    instructions: [
+      'Keep the paint in its original container with the lid tightly sealed.',
+      'Take the leftover paint to a PaintCare site or hazardous waste collection center that accepts paint.',
+    ],
+
+    safetyNote: 'Do not intentionally dry out leftover paint for easier disposal in the trash, as this can create a hazard and is not environmentally safe.',
+    sources: 
+    [
+      {
+        name: 'CalRecycle - Paint Management',
+        url: 'https://calrecycle.ca.gov/Paint/',
+      },
+      {
+        name: 'OC Waste & Recycling - Household Hazardous Waste',
+        url: 'https://oclandfills.com/hazardous-waste',
+      },
+      {
+        name: 'PaintCare - California Paint Recycling',
+        url: 'https://www.paintcare.org/states/california/',
+      },
+    ],
+    aliases: [
+  'pesticide',
+  'herbicide',
+  'insecticide',
+  'weed killer',
+  'bug killer',
+  'bug spray',
+  'rat poison',
+  'rodent poison',
+],
   },
   {
     id: 'solvents-adhesives',
@@ -524,6 +825,39 @@ const catalog = [
     type: 'item',
     name: 'Solvents & Adhesives',
     icon: PaintBucket,
+
+    summary: 'Do not place oil-based paint in the trash, curbside recycling, or down the drain. Take it to an approved recycling location, paint drop-off site, or hazardous waste collector.',
+    instructions: [
+      'Keep the paint in its original container with the lid tightly sealed.',
+      'Take the leftover paint to a PaintCare site or hazardous waste collection center that accepts paint.',
+    ],
+
+    safetyNote: 'Do not intentionally dry out leftover paint for easier disposal in the trash, as this can create a hazard and is not environmentally safe.',
+    sources: 
+    [
+      {
+        name: 'CalRecycle - Paint Management',
+        url: 'https://calrecycle.ca.gov/Paint/',
+      },
+      {
+        name: 'OC Waste & Recycling - Household Hazardous Waste',
+        url: 'https://oclandfills.com/hazardous-waste',
+      },
+      {
+        name: 'PaintCare - California Paint Recycling',
+        url: 'https://www.paintcare.org/states/california/',
+      },
+    ],
+    aliases: [
+  'solvent',
+  'adhesive',
+  'glue',
+  'paint thinner',
+  'mineral spirits',
+  'acetone',
+  'epoxy',
+  'contact cement',
+],
   },
 
   // Medicine/needles subcategories
@@ -656,9 +990,20 @@ const catalog = [
 
 function App() {
   const [currentEntryId, setCurrentEntryId] = useState(null);
+  const [searchQuery, setSearchQuery] = useState('');
   const currentEntry = catalog.find((entry) => entry.id === currentEntryId);
   const mainCategories = catalog.filter((entry) => entry.parentId === null);
   const childCategories = catalog.filter((entry) => entry.parentId === currentEntryId);
+  const normalizedSearch = searchQuery.trim().toLowerCase();
+
+  const searchResults = normalizedSearch ? catalog.filter((entry) => {
+    const aliases = entry.aliases ?? []
+    const searchableText = [entry.name, ...aliases]
+      .join(' ')
+      .toLowerCase()
+    return searchableText.includes(normalizedSearch)
+  })
+: []
 
   if (currentEntry?.type === 'item') {
     const parentEntry = catalog.find((entry) => entry.id === currentEntry.parentId)
@@ -746,7 +1091,42 @@ function App() {
         type="search"
         placeholder="Batteries, lightbulbs, paint..."
         aria-label="Search for items to dispose"
+        value={searchQuery}
+        onChange={(event) => setSearchQuery(event.target.value)}
         />
+        {normalizedSearch && (
+          <div className = "search-results">
+            {searchResults.length > 0 ? (
+              searchResults.slice(0, 6).map((entry) => {
+                const Icon = entry.icon;
+                
+                return (
+                <button
+                  className="search-result"
+                  type="button"
+                  key={entry.id}
+                  onClick={() => {
+                    setCurrentEntryId(entry.id)
+                    setSearchQuery('')
+                  }}
+                >
+                  <span className="search-result-icon" aria-hidden="true">
+                    <Icon />
+                  </span>
+                  <span>
+                    {entry.name}
+                  </span>
+                </button>
+              )
+            })
+          ) : (
+              <p className="no-results">
+                No results found.
+              </p>
+            )
+            }
+          </div>
+        )}
       </section>
       
       <section className="categories">

@@ -222,3 +222,44 @@ h1 {
   width: 16px;
   height: 16px;
 }
+
+.search-results {
+  margin-top: 8px;
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid #dce5df;
+  border-radius: 14px;
+}
+
+.search-result {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 12px;
+  padding: 13px 16px;
+  color: #18392d;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #e8eee9;
+  cursor: pointer;
+  text-align: left;
+}
+
+.search-result:last-child {
+  border-bottom: 0;
+}
+
+.search-result:hover {
+  background: #f2f6f1;
+}
+
+.search-result-icon {
+  font-size: 1.4rem;
+}
+
+.no-results {
+  margin: 0;
+  padding: 16px;
+  color: #65736c;
+  text-align: center;
+}
