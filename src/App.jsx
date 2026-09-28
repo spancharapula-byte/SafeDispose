@@ -1,5 +1,5 @@
 import './App.css';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import {
   Battery,
   BatteryMedium,
@@ -36,6 +36,7 @@ import {
   TriangleAlert,
   ExternalLink,
   Gamepad2,
+  ClipboardList,
 } from 'lucide-react';
 
 const catalog = [
@@ -991,9 +992,21 @@ const catalog = [
 function App() {
   const [currentEntryId, setCurrentEntryId] = useState(null);
   const [searchQuery, setSearchQuery] = useState('');
+  const [planItemIds, setPlanItemIds] = useState(() => {
+    const savedItems = localStorage.getItem('disposal-list')
+    return savedItems ? JSON.parse(savedItems) : []
+  })
+  const [isListOpen, setIsListOpen] = useState(false)
+  useEffect(() => {
+    localStorage.setItem(
+      'disposal-list',
+      JSON.stringify(planItemIds),
+    )
+  }, [planItemIds])
   const currentEntry = catalog.find((entry) => entry.id === currentEntryId);
   const mainCategories = catalog.filter((entry) => entry.parentId === null);
   const childCategories = catalog.filter((entry) => entry.parentId === currentEntryId);
+  const planItems = catalog.filter((entry) => planItemIds.includes(entry.id))
   const normalizedSearch = searchQuery.trim().toLowerCase();
 
   const searchResults = normalizedSearch ? catalog.filter((entry) => {
@@ -1005,19 +1018,117 @@ function App() {
   })
 : []
 
+function addToPlan(itemId) {
+  setPlanItemIds((currentIds) => {
+    if (currentIds.includes(itemId)) {
+      return currentIds
+    }
+    return [...currentIds, itemId]
+  })
+}
+
+function removeFromPlan(itemId) {
+  setPlanItemIds((currentIds) => currentIds.filter((id) => id !== itemId))
+}
+
+const disposalListButton = (
+  <button
+    className = "disposal-list-button"
+    type = "button"
+    onClick = {() => setIsListOpen(true)}
+    aria-label = {`Open disposal list with ${planItemIds.length} items`}
+  >
+    <ClipboardList aria-hidden="true"/>
+    <span>List</span>
+    <span className="list-count">{planItemIds.length}</span>
+  </button>
+)
+
+if (isListOpen) {
+  return (
+    <main className = "app">
+      <button 
+        className = "back"
+        type = "button"
+        onClick = {() => setIsListOpen(false)}
+      >
+        ← Back
+      </button>
+
+      <header className = "category-header">
+        <p className = "guide">Saved Items</p>
+        <h1>Disposal List</h1>
+        <p className = "description">
+          {planItemIds.length === 1 ? '1 item saved' : `${planItemIds.length} items saved`}
+        </p>
+      </header>
+
+      {planItems.length === 0 ? (
+        <p className = "empty-list">
+          Your disposal list is empty
+        </p>
+      ) : (
+        <div className = "disposal-items">
+          {planItems.map((item) => {
+            const Icon = item.icon
+            return (
+              <div
+                className = "disposal-item"
+                key = {item.id}>
+              <button 
+                className = "disposal-item-main"
+                type = "button"
+                onClick = {() => {
+                  setCurrentEntryId(item.id)
+                  setIsListOpen(false)
+                }}
+              >
+                <Icon aria-hidden = "true"/>
+                <span>{item.name}</span>
+              </button>
+
+              <button 
+                className = "remove-item"
+                type = "button"
+                onClick = {() => removeFromPlan(item.id)}
+              >
+                Remove Item
+              </button>
+            </div>
+            )
+          })}
+        </div>
+      )
+      }
+    </main>
+  )
+}
+
   if (currentEntry?.type === 'item') {
     const parentEntry = catalog.find((entry) => entry.id === currentEntry.parentId)
+    const isInPlan = planItemIds.includes(currentEntry.id)
     return (
       <main className="app">
+        <div className = "page-topbar">
         <button className = "back" type = "button" 
         onClick = {() => setCurrentEntryId(currentEntry.parentId)}>
           ← {parentEntry.name}
         </button>
+        {disposalListButton}
+      </div>
 
         <header className = "item-header">
           <h1>{currentEntry.name}</h1>
           <h2>How to dispose</h2>
           <p>{currentEntry.summary}</p>
+          <button 
+            className = "add-to-plan"
+            type = "button"
+            onClick = {() => addToPlan(currentEntry.id)}
+            disabled = {isInPlan}
+          >
+            {isInPlan ? 'Added to Disposal List' : 'Add to Disposal List'}
+          </button>
           <ol>{currentEntry.instructions?.map((instruction, index) => (<li key={index}>{instruction}
           </li>))}</ol>
 
@@ -1048,10 +1159,13 @@ function App() {
   if (currentEntry?.type === 'category') {
     return (
       <main className="app">
+        <div className = "page-topbar">
         <button className="back" type="button" onClick={() => 
         setCurrentEntryId(currentEntry.parentId)}>
           ← Disposal Categories
         </button>
+        {disposalListButton}
+      </div>
 
         <header className="category-header">
           <h1>{currentEntry.name}</h1>
@@ -1077,6 +1191,9 @@ function App() {
 
   return (
     <main className="app">
+      <div className = "home-topbar">
+        {disposalListButton}
+      </div>
       <header className="hero">
         <p className="guide">Orange County disposal guide</p>
         <h1>SafeDispose</h1>
@@ -1148,5 +1265,7 @@ function App() {
     </main>
   )
 }
+
+
 
 export default App

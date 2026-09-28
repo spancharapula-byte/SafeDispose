@@ -263,3 +263,157 @@ h1 {
   color: #65736c;
   text-align: center;
 }
+
+.add-to-plan {
+  width: 100%;
+  margin: 8px 0 24px;
+  padding: 14px 18px;
+  color: #ffffff;
+  background: #3b7a57;
+  border: 1px solid #3b7a57;
+  border-radius: 14px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.add-to-plan:hover:not(:disabled) {
+  background: #2f6848;
+}
+
+.add-to-plan:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.add-to-plan:disabled {
+  color: #527562;
+  background: #e5eee6;
+  border-color: #ccdace;
+  cursor: default;
+}
+
+.page-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 36px;
+}
+
+.home-topbar {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.disposal-list-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 12px;
+  color: #245b40;
+  background: transparent;
+  border: 1px solid #cbdacf;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.disposal-list-button:hover {
+  background: #edf3ed;
+}
+
+.disposal-list-button svg {
+  width: 20px;
+  height: 20px;
+}
+
+.list-count {
+  display: grid;
+  min-width: 22px;
+  height: 22px;
+  padding: 0 6px;
+  place-items: center;
+  color: #ffffff;
+  background: #3b7a57;
+  border-radius: 999px;
+  font-size: 0.75rem;
+}
+
+.disposal-items {
+  display: grid;
+  gap: 12px;
+  width: min(100%, 600px);
+  margin: 30px auto 0;
+}
+
+.disposal-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px;
+  background: #eef4ec;
+  border: 1px solid #dce6dd;
+  border-radius: 16px;
+}
+
+.disposal-item-main {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  gap: 12px;
+  color: #18392d;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  font-weight: 700;
+  text-align: left;
+}
+
+.disposal-item-main svg {
+  width: 24px;
+  height: 24px;
+}
+
+.remove-item {
+  padding: 8px 10px;
+  color: #8a3434;
+  background: transparent;
+  border: 1px solid #d9baba;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.empty-list {
+  margin-top: 30px;
+  color: #527562;
+  text-align: center;
+}
+
+.remove-item {
+  padding: 8px 10px;
+  color: #a33a3a;
+  background: transparent;
+  border: 1px solid #d9a9a9;
+  border-radius: 10px;
+  cursor: pointer;
+  transition:
+    color 150ms ease,
+    background-color 150ms ease,
+    border-color 150ms ease;
+}
+
+.remove-item:hover {
+  color: white;
+  background-color: #b84040;
+  border-color: #b84040;
+}
+
+.remove-item:active {
+  background-color: #963434;
+  transform: scale(0.96);
+}
+
+.remove-item:focus-visible {
+  outline: 3px solid rgb(184 64 64 / 25%);
+  outline-offset: 2px;
+}
