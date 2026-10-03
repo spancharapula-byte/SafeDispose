@@ -264,7 +264,7 @@ h1 {
   text-align: center;
 }
 
-.add-to-plan {
+.add-to-disposal-list {
   width: 100%;
   margin: 8px 0 24px;
   padding: 14px 18px;
@@ -276,29 +276,29 @@ h1 {
   font-weight: 700;
 }
 
-.add-to-plan:hover:not(:disabled) {
+.add-to-disposal-list:hover:not(:disabled) {
   background: #2f6848;
 }
 
-.add-to-plan:active:not(:disabled) {
+.add-to-disposal-list:active:not(:disabled) {
   transform: scale(0.98);
 }
 
-.add-to-plan:disabled {
+.add-to-disposal-list:disabled {
   color: #527562;
   background: #e5eee6;
   border-color: #ccdace;
   cursor: default;
 }
 
-.page-topbar {
+.page-top {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 36px;
 }
 
-.home-topbar {
+.home-top {
   display: flex;
   justify-content: flex-end;
   margin-bottom: 20px;
@@ -416,4 +416,108 @@ h1 {
 .remove-item:focus-visible {
   outline: 3px solid rgb(184 64 64 / 25%);
   outline-offset: 2px;
+}
+
+.location-section {
+  width: 100%;
+  max-width: 760px;
+  margin: 40px auto 0;
+}
+
+.location-section > h2 {
+  font-size: 1.55rem;
+  margin-bottom: 8px;
+  color: #163f32;
+}
+
+.location-section-description {
+  margin: 0 0 24px;
+  color: #5f6f68;
+  font-size: 0.98rem;
+}
+
+.location-card {
+  padding: 22px 24px;
+  margin-bottom: 18px;
+  border: 1px solid #dce8df;
+  border-radius: 16px;
+  background: #f7faf7;
+}
+
+.location-card h3 {
+  margin: 0 0 8px;
+  font-size: 1.15rem;
+  color: #163f32;
+}
+
+.location-address {
+  margin: 0 0 14px;
+  color: #56655f;
+  font-size: 0.95rem;
+}
+
+.location-match {
+  margin: 0 0 14px;
+  font-weight: 600;
+  color: #275844;
+}
+
+.location-items {
+  margin: 10px 0 18px;
+  padding-left: 22px;
+}
+
+.location-items li {
+  margin: 7px 0;
+  color: #23483c;
+  font-size: 0.97rem;
+}
+
+.location-hours {
+  margin: 14px 0;
+  color: #56655f;
+  font-size: 0.94rem;
+}
+
+.location-link {
+  display: inline-block;
+  margin-top: 4px;
+  font-weight: 600;
+  color: #2f6b50;
+  text-decoration: none;
+}
+
+.location-link:hover {
+  text-decoration: underline;
+}
+
+.location-actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: 16px;
+}
+
+.location-directions {
+  display: inline-block;
+  padding: 8px 12px;
+  color: #ffffff;
+  background: #3b7a57;
+  border-radius: 9px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.location-directions:hover {
+  background: #2f6848;
+}
+
+.location-link {
+  color: #2f6b50;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.location-link:hover {
+  text-decoration: underline;
 }

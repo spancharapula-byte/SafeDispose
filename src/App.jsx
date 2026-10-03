@@ -1,5 +1,6 @@
-import './App.css';
-import { useEffect, useState } from 'react';
+import './App.css'
+import { useEffect, useState } from 'react'
+// Lucide icons import
 import {
   Battery,
   BatteryMedium,
@@ -7,7 +8,6 @@ import {
   BatteryFull,
   Circle,
   Lightbulb,
-  LampDesk,
   Laptop,
   Smartphone,
   Monitor,
@@ -37,8 +37,10 @@ import {
   ExternalLink,
   Gamepad2,
   ClipboardList,
-} from 'lucide-react';
+} from 'lucide-react'
 
+
+// All categories info
 const catalog = [
   {
     id: 'batteries',
@@ -140,7 +142,7 @@ const catalog = [
   {
     id: 'single-use-batteries',
     parentId: 'batteries',
-    type: 'item',
+    type: 'subcategory',
     name: 'Single-Use Batteries',
     icon: BatteryMedium,
 
@@ -185,7 +187,7 @@ const catalog = [
   {
     id: 'rechargeable-batteries',
     parentId: 'batteries',
-    type: 'item',
+    type: 'subcategory',
     name: 'Rechargeable Batteries',
     icon: BatteryCharging,
 
@@ -221,7 +223,7 @@ const catalog = [
   {
     id: 'lithium-ion-batteries',
     parentId: 'batteries',
-    type: 'item',
+    type: 'subcategory',
     name: 'Lithium-Ion Batteries',
     icon: BatteryFull,
 
@@ -257,7 +259,7 @@ const catalog = [
   {
     id: 'button-coin-batteries',
     parentId: 'batteries',
-    type: 'item',
+    type: 'subcategory',
     name: 'Button & Coin Batteries',
     icon: Circle,
 
@@ -297,7 +299,7 @@ const catalog = [
   {
     id: 'car-batteries',
     parentId: 'batteries',
-    type: 'item',
+    type: 'subcategory',
     name: 'Car Batteries',
     icon: CarBattery,
 
@@ -335,7 +337,7 @@ const catalog = [
   {
     id: 'cfl-bulbs',
     parentId: 'lighting',
-    type: 'item',
+    type: 'subcategory',
     name: 'CFL Bulbs',
     icon: Lightbulb,
 
@@ -370,7 +372,7 @@ const catalog = [
   {
     id: 'led-bulbs',
     parentId: 'lighting',
-    type: 'item',
+    type: 'subcategory',
     name: 'LED Bulbs',
     icon: Lightbulb,
 
@@ -404,7 +406,7 @@ const catalog = [
   {
     id: 'incandescent-halogen-bulbs',
     parentId: 'lighting',
-    type: 'item',
+    type: 'subcategory',
     name: 'Incandescent & Halogen Bulbs',
     icon: Lightbulb,
 
@@ -434,7 +436,7 @@ const catalog = [
   {
     id: 'fluorescent-tubes',
     parentId: 'lighting',
-    type: 'item',
+    type: 'subcategory',
     name: 'Fluorescent Tubes',
     icon: Lightbulb,
 
@@ -475,7 +477,7 @@ const catalog = [
   {
     id: 'phones-tablets',
     parentId: 'electronics',
-    type: 'item',
+    type: 'subcategory',
     name: 'Phones & Tablets',
     icon: Smartphone,
 
@@ -513,7 +515,7 @@ const catalog = [
   {
     id: 'laptops-computers',
     parentId: 'electronics',
-    type: 'item',
+    type: 'subcategory',
     name: 'Laptops & Computers',
     icon: Laptop,
 
@@ -549,7 +551,7 @@ const catalog = [
   {
     id: 'tvs-monitors',
     parentId: 'electronics',
-    type: 'item',
+    type: 'subcategory',
     name: 'TVs & Monitors',
     icon: Monitor,
 
@@ -584,7 +586,7 @@ const catalog = [
   {
     id: 'cables-chargers',
     parentId: 'electronics',
-    type: 'item',
+    type: 'subcategory',
     name: 'Cables & Chargers',
     icon: Cable,
 
@@ -622,7 +624,7 @@ const catalog = [
   {
     id: 'small-electronics-accessories',
     parentId: 'electronics',
-    type: 'item',
+    type: 'subcategory',
     name: 'Small Electronics & Accessories',
     icon: Gamepad2,
 
@@ -666,7 +668,7 @@ const catalog = [
   {
     id: 'latex-paint',
     parentId: 'paint-chemicals',
-    type: 'item',
+    type: 'subcategory',
     name: 'Latex Paint',
     icon: PaintBucket,
 
@@ -704,7 +706,7 @@ const catalog = [
   {
     id: 'oil-based-paint',
     parentId: 'paint-chemicals',
-    type: 'item',
+    type: 'subcategory',
     name: 'Oil-Based Paint',
     icon: PaintBucket,
 
@@ -743,7 +745,7 @@ const catalog = [
   {
     id: 'cleaning-chemicals',
     parentId: 'paint-chemicals',
-    type: 'item',
+    type: 'subcategory',
     name: 'Cleaning Chemicals',
     icon: SprayCan,
 
@@ -783,7 +785,7 @@ const catalog = [
   {
     id: 'pesticides-herbicides',
     parentId: 'paint-chemicals',
-    type: 'item',
+    type: 'subcategory',
     name: 'Pesticides & Herbicides',
     icon: FlaskConical,
 
@@ -823,7 +825,7 @@ const catalog = [
   {
     id: 'solvents-adhesives',
     parentId: 'paint-chemicals',
-    type: 'item',
+    type: 'subcategory',
     name: 'Solvents & Adhesives',
     icon: PaintBucket,
 
@@ -865,28 +867,28 @@ const catalog = [
   {
     id: 'medication',
     parentId: 'medicine-needles',
-    type: 'item',
+    type: 'subcategory',
     name: 'Medication',
     icon: Pill,
   },
   {
     id: 'needles-syringes',
     parentId: 'medicine-needles',
-    type: 'item',
+    type: 'subcategory',
     name: 'Needles & Syringes',
     icon: Syringe,
   },
   {
     id: 'lancets',
     parentId: 'medicine-needles',
-    type: 'item',
+    type: 'subcategory',
     name: 'Lancets',
     icon: Syringe,
   },
   {
     id: 'inhalers',
     parentId: 'medicine-needles',
-    type: 'item',
+    type: 'subcategory',
     name: 'Inhalers',
     icon: Wind,
   },
@@ -895,28 +897,28 @@ const catalog = [
   {
     id: 'motor-oil-filters',
     parentId: 'automotive',
-    type: 'item',
+    type: 'subcategory',
     name: 'Motor Oil & Filters',
     icon: Droplets,
   },
   {
     id: 'antifreeze-coolant',
     parentId: 'automotive',
-    type: 'item',
+    type: 'subcategory',
     name: 'Antifreeze & Coolant',
     icon: Snowflake,
   },
   {
     id: 'gasoline-fuel',
     parentId: 'automotive',
-    type: 'item',
+    type: 'subcategory',
     name: 'Gasoline & Fuel',
     icon: Fuel,
   },
   {
     id: 'tires',
     parentId: 'automotive',
-    type: 'item',
+    type: 'subcategory',
     name: 'Tires',
     icon: CircleGauge,
   },
@@ -925,35 +927,35 @@ const catalog = [
   {
     id: 'refrigerators-freezers',
     parentId: 'appliances',
-    type: 'item',
+    type: 'subcategory',
     name: 'Refrigerators & Freezers',
     icon: Refrigerator,
   },
   {
     id: 'air-conditioners',
     parentId: 'appliances',
-    type: 'item',
+    type: 'subcategory',
     name: 'Air Conditioners',
     icon: Snowflake,
   },
   {
     id: 'washers-dryers',
     parentId: 'appliances',
-    type: 'item',
+    type: 'subcategory',
     name: 'Washers & Dryers',
     icon: WashingMachine,
   },
   {
     id: 'microwaves-ovens',
     parentId: 'appliances',
-    type: 'item',
+    type: 'subcategory',
     name: 'Microwaves & Ovens',
     icon: Microwave,
   },
   {
     id: 'small-appliances',
     parentId: 'appliances',
-    type: 'item',
+    type: 'subcategory',
     name: 'Small Appliances',
     icon: CookingPot,
   },
@@ -962,37 +964,189 @@ const catalog = [
   {
     id: 'couches-sofas',
     parentId: 'furniture-bulky-items',
-    type: 'item',
+    type: 'subcategory',
     name: 'Couches & Sofas',
     icon: Armchair,
   },
   {
     id: 'chairs-tables',
     parentId: 'furniture-bulky-items',
-    type: 'item',
+    type: 'subcategory',
     name: 'Chairs & Tables',
     icon: RockingChair,
   },
   {
     id: 'mattresses',
     parentId: 'furniture-bulky-items',
-    type: 'item',
+    type: 'subcategory',
     name: 'Mattresses',
     icon: BedDouble,
   },
   {
     id: 'carpets-rugs',
     parentId: 'furniture-bulky-items',
-    type: 'item',
+    type: 'subcategory',
     name: 'Carpets & Rugs',
     icon: RectangleHorizontal,
   }
 ]
 
+// Location catalog/info
+const disposalLocations = [
+  {
+    id: 'hhw-irvine',
+    name: 'Irvine Household Hazardous Waste Collection Center',
+    shortName: 'Irvine HHW Center',
+    address: '6411 Oak Canyon, Irvine, CA 92618',
+    type: 'County HHW Center',
+
+    acceptedItemIds: [
+      'single-use-batteries',
+      'rechargeable-batteries',
+      'lithium-ion-batteries',
+      'button-coin-batteries',
+      'car-batteries',
+
+      'cfl-bulbs',
+      'led-bulbs',
+      'fluorescent-tubes',
+
+      'phones-tablets',
+      'laptops-computers',
+      'tvs-monitors',
+      'cables-chargers',
+      'small-electronics-accessories',
+
+      'latex-paint',
+      'oil-based-paint',
+      'cleaning-chemicals',
+      'pesticides-herbicides',
+      'solvents-adhesives',
+    ],
+
+    hours: 'Tuesday–Saturday, 9 AM–3 PM',
+
+    website:
+      'https://www.oclandfills.com/hazardous-waste',
+  },
+
+  {
+    id: 'hhw-anaheim',
+    name: 'Anaheim Household Hazardous Waste Collection Center',
+    shortName: 'Anaheim HHW Center',
+    address: '1071 N. Blue Gum Street, Anaheim, CA 92806',
+    type: 'County HHW Center',
+
+    acceptedItemIds: [
+      'single-use-batteries',
+      'rechargeable-batteries',
+      'lithium-ion-batteries',
+      'button-coin-batteries',
+      'car-batteries',
+
+      'cfl-bulbs',
+      'led-bulbs',
+      'fluorescent-tubes',
+
+      'phones-tablets',
+      'laptops-computers',
+      'tvs-monitors',
+      'cables-chargers',
+      'small-electronics-accessories',
+
+      'latex-paint',
+      'oil-based-paint',
+      'cleaning-chemicals',
+      'pesticides-herbicides',
+      'solvents-adhesives',
+    ],
+
+    hours: 'Tuesday–Saturday, 9 AM–3 PM',
+
+    website:
+      'https://www.oclandfills.com/hazardous-waste',
+  },
+  {
+  id: 'hhw-huntington-beach',
+  name: 'Huntington Beach Household Hazardous Waste Collection Center',
+  shortName: 'Huntington Beach HHW Center',
+  address: '17121 Nichols Lane, Huntington Beach, CA 92647',
+  type: 'County HHW Center',
+
+  acceptedItemIds: [
+    'single-use-batteries',
+    'rechargeable-batteries',
+    'lithium-ion-batteries',
+    'button-coin-batteries',
+    'car-batteries',
+
+    'cfl-bulbs',
+    'led-bulbs',
+    'fluorescent-tubes',
+
+    'phones-tablets',
+    'laptops-computers',
+    'tvs-monitors',
+    'cables-chargers',
+    'small-electronics-accessories',
+
+    'latex-paint',
+    'oil-based-paint',
+    'cleaning-chemicals',
+    'pesticides-herbicides',
+    'solvents-adhesives',
+  ],
+
+  hours: 'Tuesday–Saturday, 9 AM–3 PM',
+
+  website:
+    'https://www.oclandfills.com/hazardous-waste',
+},
+
+{
+  id: 'hhw-san-juan-capistrano',
+  name: 'San Juan Capistrano Household Hazardous Waste Collection Center',
+  shortName: 'San Juan Capistrano HHW Center',
+  address: '32250 Avenida La Pata, San Juan Capistrano, CA 92675',
+  type: 'County HHW Center',
+
+  acceptedItemIds: [
+    'single-use-batteries',
+    'rechargeable-batteries',
+    'lithium-ion-batteries',
+    'button-coin-batteries',
+    'car-batteries',
+
+    'cfl-bulbs',
+    'led-bulbs',
+    'fluorescent-tubes',
+
+    'phones-tablets',
+    'laptops-computers',
+    'tvs-monitors',
+    'cables-chargers',
+    'small-electronics-accessories',
+
+    'latex-paint',
+    'oil-based-paint',
+    'cleaning-chemicals',
+    'pesticides-herbicides',
+    'solvents-adhesives',
+  ],
+
+  hours: 'Tuesday–Saturday, 9 AM–3 PM',
+
+  website:
+    'https://www.oclandfills.com/hazardous-waste',
+},
+]
+
+
+// Main app 
 function App() {
-  const [currentEntryId, setCurrentEntryId] = useState(null);
-  const [searchQuery, setSearchQuery] = useState('');
-  const [planItemIds, setPlanItemIds] = useState(() => {
+  const [currentEntryId, setCurrentEntryId] = useState(null)
+  const [searchQuery, setSearchQuery] = useState('')
+  const [disposalListItemIds, setDisposalListItemIds] = useState(() => {
     const savedItems = localStorage.getItem('disposal-list')
     return savedItems ? JSON.parse(savedItems) : []
   })
@@ -1000,15 +1154,20 @@ function App() {
   useEffect(() => {
     localStorage.setItem(
       'disposal-list',
-      JSON.stringify(planItemIds),
+      JSON.stringify(disposalListItemIds),
     )
-  }, [planItemIds])
-  const currentEntry = catalog.find((entry) => entry.id === currentEntryId);
-  const mainCategories = catalog.filter((entry) => entry.parentId === null);
-  const childCategories = catalog.filter((entry) => entry.parentId === currentEntryId);
-  const planItems = catalog.filter((entry) => planItemIds.includes(entry.id))
-  const normalizedSearch = searchQuery.trim().toLowerCase();
+  }, [disposalListItemIds])
+  const currentEntry = catalog.find((entry) => entry.id === currentEntryId)
+  const mainCategories = catalog.filter((entry) => entry.parentId === null)
+  const subCategories = catalog.filter((entry) => entry.parentId === currentEntryId)
+  const disposalListItems = catalog.filter((entry) => disposalListItemIds.includes(entry.id))
+  const matchedLocations = disposalLocations.map((location) => {
+    const matchingItems = disposalListItems.filter((item) => location.acceptedItemIds.includes(item.id))
+    return {...location, matchingItems,}
+  }).filter((location) => location.matchingItems.length > 0).sort((a, b) => b.matchingItems.length - a.matchingItems.length)
+  const normalizedSearch = searchQuery.trim().toLowerCase()
 
+  // Search feature code
   const searchResults = normalizedSearch ? catalog.filter((entry) => {
     const aliases = entry.aliases ?? []
     const searchableText = [entry.name, ...aliases]
@@ -1018,8 +1177,9 @@ function App() {
   })
 : []
 
-function addToPlan(itemId) {
-  setPlanItemIds((currentIds) => {
+// Add items to the disposal plan
+function addToDisposalList(itemId) {
+  setDisposalListItemIds((currentIds) => {
     if (currentIds.includes(itemId)) {
       return currentIds
     }
@@ -1027,23 +1187,26 @@ function addToPlan(itemId) {
   })
 }
 
-function removeFromPlan(itemId) {
-  setPlanItemIds((currentIds) => currentIds.filter((id) => id !== itemId))
+// Remove items from the disposal list
+function removeFromDisposalList(itemId) {
+  setDisposalListItemIds((currentIds) => currentIds.filter((id) => id !== itemId))
 }
 
+// Button to add items to the disposal list
 const disposalListButton = (
   <button
     className = "disposal-list-button"
     type = "button"
     onClick = {() => setIsListOpen(true)}
-    aria-label = {`Open disposal list with ${planItemIds.length} items`}
+    aria-label = {`Open disposal list with ${disposalListItemIds.length} items`}
   >
     <ClipboardList aria-hidden="true"/>
     <span>List</span>
-    <span className="list-count">{planItemIds.length}</span>
+    <span className="list-count">{disposalListItemIds.length}</span>
   </button>
 )
 
+// Disposal list page
 if (isListOpen) {
   return (
     <main className = "app">
@@ -1059,17 +1222,17 @@ if (isListOpen) {
         <p className = "guide">Saved Items</p>
         <h1>Disposal List</h1>
         <p className = "description">
-          {planItemIds.length === 1 ? '1 item saved' : `${planItemIds.length} items saved`}
+          {disposalListItemIds.length === 1 ? '1 item saved' : `${disposalListItemIds.length} items saved`}
         </p>
       </header>
 
-      {planItems.length === 0 ? (
+      {disposalListItems.length === 0 ? (
         <p className = "empty-list">
           Your disposal list is empty
         </p>
       ) : (
         <div className = "disposal-items">
-          {planItems.map((item) => {
+          {disposalListItems.map((item) => {
             const Icon = item.icon
             return (
               <div
@@ -1090,7 +1253,7 @@ if (isListOpen) {
               <button 
                 className = "remove-item"
                 type = "button"
-                onClick = {() => removeFromPlan(item.id)}
+                onClick = {() => removeFromDisposalList(item.id)}
               >
                 Remove Item
               </button>
@@ -1100,16 +1263,60 @@ if (isListOpen) {
         </div>
       )
       }
+      {matchedLocations.length > 0 && (
+        <section className="location-section">
+          <h2>Where to take your items:</h2>
+
+          <div className="location-list">
+            {matchedLocations.map((location) => (
+              <article className="location-card" key={location.id}>
+                <h3>{location.name}</h3>
+                <p className='location-address'>{location.address}</p>
+                <p className='location-match'>
+                  Handles {location.matchingItems.length} of your{' '}
+                  {disposalListItems.length} items:
+                </p>
+                <ul className="location-items">
+                  {location.matchingItems.map((item) => (
+                    <li key={item.id}>{item.name}</li>
+                  ))}
+                </ul>
+                <p className='location-hours'>{location.hours}</p>
+                <div className="location-actions">
+                  <a
+                    className="location-directions"
+                    href={`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(`${location.name}, ${location.address}`)}`}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Get Directions
+                  </a>
+
+                  <a
+                    className="location-link"
+                    href={location.website}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    View official information
+                  </a>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+      )}
     </main>
   )
 }
 
-  if (currentEntry?.type === 'item') {
+  // Disposal info pages
+  if (currentEntry?.type === 'subcategory') {
     const parentEntry = catalog.find((entry) => entry.id === currentEntry.parentId)
-    const isInPlan = planItemIds.includes(currentEntry.id)
+    const isInDisposalList = disposalListItemIds.includes(currentEntry.id)
     return (
       <main className="app">
-        <div className = "page-topbar">
+        <div className = "page-top">
         <button className = "back" type = "button" 
         onClick = {() => setCurrentEntryId(currentEntry.parentId)}>
           ← {parentEntry.name}
@@ -1122,12 +1329,12 @@ if (isListOpen) {
           <h2>How to dispose</h2>
           <p>{currentEntry.summary}</p>
           <button 
-            className = "add-to-plan"
+            className = "add-to-disposal-list"
             type = "button"
-            onClick = {() => addToPlan(currentEntry.id)}
-            disabled = {isInPlan}
+            onClick = {() => addToDisposalList(currentEntry.id)}
+            disabled = {isInDisposalList}
           >
-            {isInPlan ? 'Added to Disposal List' : 'Add to Disposal List'}
+            {isInDisposalList ? 'Added to Disposal List' : 'Add to Disposal List'}
           </button>
           <ol>{currentEntry.instructions?.map((instruction, index) => (<li key={index}>{instruction}
           </li>))}</ol>
@@ -1156,10 +1363,11 @@ if (isListOpen) {
     )
   }
 
+  // Return to homepage
   if (currentEntry?.type === 'category') {
     return (
       <main className="app">
-        <div className = "page-topbar">
+        <div className = "page-top">
         <button className="back" type="button" onClick={() => 
         setCurrentEntryId(currentEntry.parentId)}>
           ← Disposal Categories
@@ -1173,8 +1381,8 @@ if (isListOpen) {
         </header>
 
         <div className = "category-grid">
-          {childCategories.map((entry) => {
-            const Icon = entry.icon;
+          {subCategories.map((entry) => {
+            const Icon = entry.icon
           
           return (
             <button className = "category-button" type = "button" key = {entry.id} 
@@ -1182,23 +1390,24 @@ if (isListOpen) {
               <span className="category-icon" aria-hidden="true"><Icon /></span>
               <span className="category-name">{entry.name}</span>
             </button>
-            );
+            )
             })}
         </div>
       </main>
     )
   }
 
+  // Homepage
   return (
     <main className="app">
-      <div className = "home-topbar">
+      <div className = "home-top">
         {disposalListButton}
       </div>
       <header className="hero">
         <p className="guide">Orange County disposal guide</p>
         <h1>SafeDispose</h1>
         <p className="description">
-          Find clear instructions on how to safely dispose your everyday items.
+          Find clear instructions on how to safely dispose your everyday items
         </p>
       </header>
 
@@ -1215,7 +1424,7 @@ if (isListOpen) {
           <div className = "search-results">
             {searchResults.length > 0 ? (
               searchResults.slice(0, 6).map((entry) => {
-                const Icon = entry.icon;
+                const Icon = entry.icon
                 
                 return (
                 <button
@@ -1250,7 +1459,7 @@ if (isListOpen) {
         <h2>Browse by category</h2>
         <div className="category-grid">
           {mainCategories.map((category) => {
-            const Icon = category.icon;
+            const Icon = category.icon
           
           return (
             <button className="category-button" type="button" key={category.id} 
@@ -1258,7 +1467,7 @@ if (isListOpen) {
               <span className="category-icon" aria-hidden="true"><Icon /></span>
               <span className="category-name">{category.name}</span>
             </button>
-          );
+          )
           })}
         </div>
       </section>
