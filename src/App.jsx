@@ -146,7 +146,7 @@ const catalog = [
     name: 'Single-Use Batteries',
     icon: BatteryMedium,
 
-    summary: 'Do not place single-use batteries in the trash or curbside recycling. Take them to an approved battery recycling location, retailer, or hazardous waste collector.',
+    summary: 'Do not place single-use batteries in the trash or curbside recycling. Take them to an approved battery recycling location, participating retailer, or hazardous waste collection center.',
     instructions: [
       'Store the batteries in a cool, safe, dry place away from children and other flammable materials until recycled.',
       'For extra safety, tape the ends of the batteries with non-conductive or electrical tape to prevent short-circuiting.',
@@ -191,11 +191,11 @@ const catalog = [
     name: 'Rechargeable Batteries',
     icon: BatteryCharging,
 
-    summary: 'Do not place rechargeable batteries in the trash or curbside recycling. Take them to an approved battery recycling location, retailer, or hazardous waste collector.',
+    summary: 'Do not place rechargeable batteries in the trash or curbside recycling. Take them to an approved battery recycling location, retailer, or hazardous waste collection center.',
     instructions: [
       'Remove the batteries from devices if it is designed to be safely removed.',
       'Place each battery in a separate plastic bag or tape the ends of the batteries with clear or electrical tape to prevent short-circuiting.',
-      'Take the batteries to an approved battery collector/recycler, retailer, or hazardous waste collector.',
+      'Take the batteries to an approved battery collector/recycler, retailer, or hazardous waste collection center.',
     ],
 
     safetyNote: 'Rechargeable batteries may still retain enough energy to cause a fire or injury. Do not damage, crush, puncture, or improperly remove batteries from a device.',
@@ -227,11 +227,11 @@ const catalog = [
     name: 'Lithium-Ion Batteries',
     icon: BatteryFull,
 
-    summary: 'Do not place lithium-ion batteries in the trash or curbside recycling. Take them to an approved battery recycling location, retailer, or hazardous waste collector.',
+    summary: 'Do not place lithium-ion batteries in the trash or curbside recycling. Take them to an approved battery recycling location, retailer, or hazardous waste collection center.',
     instructions: [
       'Remove the batteries from devices if it is designed to be safely removed.',
       'Place each battery in a separate plastic bag or tape the ends of the batteries with clear or electrical tape to prevent short-circuiting.',
-      'Take the batteries to an approved battery collector/recycler, retailer, or hazardous waste collector.',
+      'Take the batteries to an approved battery collector/recycler, retailer, or hazardous waste collection center.',
     ],
 
     safetyNote: 'Lithium-ion batteries can cause fires if damaged or short-circuited. Do not crush, bend, puncture, or improperly remove them from a device. If a battery is damaged or leaking, contact the battery/device manufacturer for specific instructions.',
@@ -263,11 +263,11 @@ const catalog = [
     name: 'Button & Coin Batteries',
     icon: Circle,
 
-    summary: 'Do not place button or coin batteries in the trash or curbside recycling. Take them to an approved battery recycling location, retailer, or hazardous waste collector.',
+    summary: 'Do not place button or coin batteries in the trash or curbside recycling. Take them to an approved battery recycling location, retailer, or hazardous waste collection center.',
     instructions: [
       'Remove the batteries from devices if it is designed to be safely removed.',
       'Cover the battery terminals or the entire battery with clear or electrical tape to prevent short-circuiting.',
-      'Take the batteries to an approved battery collector/recycler, retailer, or hazardous waste collector.',
+      'Take the batteries to an approved battery collector/recycler, retailer, or hazardous waste collection center.',
     ],
 
     safetyNote: 'Button and coin batteries can cause severe injuries if swallowed. Keep them away from children. If one is swallowed, seek medical attention immediately.',
@@ -303,7 +303,7 @@ const catalog = [
     name: 'Car Batteries',
     icon: CarBattery,
 
-    summary: 'Do not place car batteries in the trash or curbside recycling. Take them to an approved battery recycling location, retailer, or hazardous waste collector.',
+    summary: 'Do not place car batteries in the trash or curbside recycling. Take them to an approved battery recycling location, retailer, or hazardous waste collection center.',
     instructions: [
       'Keep the battery intact and undamaged if possible, and follow all handling instructions provided on the battery.',
       'Return the used battery to the retailer for recycling if purchasing a new one.',
@@ -341,11 +341,11 @@ const catalog = [
     name: 'CFL Bulbs',
     icon: Lightbulb,
 
-    summary: 'Do not place CFL bulbs in the trash or curbside recycling. Take them to an approved recycling location, retailer, or hazardous waste collector.',
+    summary: 'Do not place CFL bulbs in the trash or curbside recycling. Take them to an approved recycling location, participating retailer, or hazardous waste collection center.',
     instructions: [
       'Keep the bulb intact and undamaged if possible, and handle carefully to prevent breakage.',
-      'Store the bulb in a safe, dry place away from children and hazardous materials until recycled.',
-      'Take the CFL bulbs to an approved collector/recycler, retailer, or hazardous waste collector that accepts fluorescent bulbs.',
+      'Store the bulb in a safe, dry place away from children and pets where it cannot be broken.',
+      'Take the CFL bulbs to an approved collector/recycler, retailer, or hazardous waste collection center that accepts fluorescent bulbs.',
     ],
 
     safetyNote: 'CFL bulbs contain small amounts of mercury. Do not break them, and if one breaks, keep people away from the area, ventilate the room, and follow official cleanup guidance.',
@@ -376,11 +376,11 @@ const catalog = [
     name: 'LED Bulbs',
     icon: Lightbulb,
 
-    summary: 'Do not place LED bulbs in the trash or curbside recycling. Take them to an approved recycling location, retailer, or hazardous waste collector.',
+    summary: 'Do not place LED bulbs in the trash or curbside recycling. Take them to an approved recycling location or hazardous waste collection center.',
     instructions: [
       'Keep the bulb intact and undamaged if possible, and handle carefully to prevent breakage.',
       'Do not place LED bulbs in the trash or curbside recycling.',
-      'Take the LED bulbs to an approved collector/recycler, retailer, or hazardous waste collector that accepts LED lights.',
+      'Take the LED bulbs to an approved recycling location or hazardous waste collection center that accepts LED lights.',
     ],
 
     safetyNote: 'LED bulbs can contain small amounts of hazardous materials. Do not break them, puncture, or crush them before recycling.',
@@ -440,11 +440,11 @@ const catalog = [
     name: 'Fluorescent Tubes',
     icon: Lightbulb,
 
-    summary: 'Do not place fluorescent tubes in the trash or curbside recycling. Take them to an appropriate recycling location, retailer, or hazardous waste collector.',
+    summary: 'Do not place fluorescent tubes in the trash or curbside recycling. Take them to an appropriate recycling location, retailer, or hazardous waste collection center.',
     instructions: [
       'Keep the tube intact and undamaged if possible, and handle carefully to prevent breakage.',
-      'Store the tube in a safe, dry place away from children and hazardous materials until recycled.',
-      'Take the fluorescent tubes to an approved collector/recycler, retailer, or hazardous waste collector that accepts fluorescent lamps.',
+      'Store the tube in a safe, dry place away from children and pets where it cannot be broken.',
+      'Take the fluorescent tubes to an approved collector/recycler, retailer, or hazardous waste collection center that accepts fluorescent lamps.',
     ],
 
     safetyNote: 'Fluorescent tubes contain small amounts of mercury. Do not break them, and if one breaks, keep people away from the area, ventilate the room, and follow official cleanup guidance.',
@@ -481,11 +481,11 @@ const catalog = [
     name: 'Phones & Tablets',
     icon: Smartphone,
 
-    summary: 'Do not place phones or tablets in the trash or curbside recycling. Take them to an approved recycling location, retailer, or e-waste collector.',
+    summary: 'Do not place phones or tablets in the trash or curbside recycling. Take them to an authorized e-waste collector/recycler or household hazardous waste collection center.',
     instructions: [
       'Back up any important data from the device, sign out of all your accounts, and erase all personal data from the device.',
       'Keep the device intact and undamaged if possible, and do not crush, puncture, open, or damage it before recycling.',
-      'Take the device to an authorized e-waste collector/recycler, retailer, or hazardous waste collector that accepts electronic waste.',
+      'Take the device to an authorized e-waste collector/recycler, retailer, or hazardous waste collection center that accepts electronic waste.',
     ],
 
     safetyNote: 'Many phones and tablets can contain lithium-ion batteries that can cause fires if damaged. Do not crush, bend, or tamper with a device, and do not try to forcefully remove a battery that isn\'t intended to be removed.',
@@ -519,11 +519,11 @@ const catalog = [
     name: 'Laptops & Computers',
     icon: Laptop,
 
-    summary: 'Do not place laptops or computers in the trash or curbside recycling. Take them to an approved recycling location, retailer, or e-waste collector.',
+    summary: 'Do not place laptops or computers in the trash or curbside recycling. Take them to an authorized e-waste collector/recycler or household hazardous waste collection center.',
     instructions: [
       'Back up any important data from the device, sign out of all your accounts, and erase all personal data from the device.',
       'Keep the device intact and undamaged if possible, and do not crush, puncture, open, or damage it before recycling.',
-      'Take the device to an authorized e-waste collector/recycler, retailer, or hazardous waste collector that accepts electronic waste.',
+      'Take the device to an authorized e-waste collector/recycler, retailer, or hazardous waste collection center that accepts electronic waste.',
     ],
 
     safetyNote: 'Many laptops and computers can contain lithium-ion batteries that can cause fires if damaged. Do not crush, bend, or tamper with a device, and do not try to forcefully remove a battery that isn\'t intended to be removed.',
@@ -555,10 +555,10 @@ const catalog = [
     name: 'TVs & Monitors',
     icon: Monitor,
 
-    summary: 'Do not place TVs or monitors in the trash or curbside recycling. Take them to an approved recycling location, retailer, or e-waste collector.',
+    summary: 'Do not place TVs or in the trash or curbside recycling. Take them to an authorized e-waste collector/recycler or household hazardous waste collection center.',
     instructions: [
       'Keep the TV or monitor intact and undamaged if possible, and do not crush, puncture, open, or damage it before recycling.',
-      'Take the device to an authorized e-waste collector/recycler, retailer, or hazardous waste collector that accepts electronic waste.',
+      'Take the device to an authorized e-waste collector/recycler, retailer, or hazardous waste collection center that accepts electronic waste.',
     ],
 
     safetyNote: 'TVs and monitors can contain hazardous materials such as lead and mercury. Do not crush, bend, or tamper with it before recycling.',
@@ -590,13 +590,14 @@ const catalog = [
     name: 'Cables & Chargers',
     icon: Cable,
 
-    summary: 'Do not place cables or chargers in curbside recycling. Take them to an approved recycling location, retailer, or e-waste collector.',
+    summary: 'Do not place cables or chargers in curbside recycling. Recyle them through an e-waste or electronics recycling program that accepits these items whenever possible.',
     instructions: [
       'Keep the item intact and undamaged if possible, and do not puncture, open, or damage it before recycling.',
-      'Take the cables and chargers to an authorized e-waste collector/recycler or retailer that accepts them.',
+      'Check with an electronics recycling program or e-waste collection location to confirm that it accepts cables or chargers.',
+      'Take accepted cables and chargers to the appropriate e-waste or electronics recycling location.',
     ],
 
-    safetyNote: 'Damaged/broken chargers and power adapters can pose electrical hazards. Do not use a charger with exposed wires, damaged insulation.',
+    safetyNote: 'Damaged/broken chargers and power adapters can pose electrical hazards. Do not use a charger with exposed wires or damaged insulation.',
     sources:
     [
       {
@@ -631,7 +632,7 @@ const catalog = [
     summary: 'Do not place small electronics in the trash or curbside recycling. Take them to an approved recycling location, retailer, or e-waste collector.',
     instructions: [
       'Keep the item intact and undamaged if possible, and do not crush, puncture, open, or damage it before recycling.',
-      'Take the item to an authorized e-waste collector/recycler, retailer, or hazardous waste collector that accepts electronic waste.',
+      'Take the item to an authorized e-waste collector/recycler, retailer, or hazardous waste collection center that accepts electronic waste.',
     ],
 
     safetyNote: 'Some small electronics and accessories can contain lithium-ion batteries that can cause fires if damaged. Do not crush, bend, or tamper with a device, and do not try to forcefully remove a battery that isn\'t intended to be removed.',
@@ -672,13 +673,14 @@ const catalog = [
     name: 'Latex Paint',
     icon: PaintBucket,
 
-    summary: 'Do not place latex paint in the trash, curbside recycling, or down the drain. Take it to an approved recycling location, paint drop-off site, or hazardous waste collector.',
+    summary: 'Do not place latex paint in the trash, curbside recycling, or down the drain. Take it to an approved recycling location, paint drop-off site, or hazardous waste collection center.',
     instructions: [
-      'Keep the paint in its original container with the lid tightly sealed.',
-      'Take the leftover paint to a PaintCare site or hazardous waste collection center that accepts paint.',
+      'Keep the paint in its original labeled container with the lid tightly sealed.',
+      'Do not pour it into a drain or sink, mix with other chemicals, or transfer it to another container.',
+      'Take the leftover paint to a PaintCare site or a household hazardous waste collection center.',
     ],
 
-    safetyNote: 'Do not intentionally dry out leftover paint for easier disposal in the trash, as this can create a hazard and is not environmentally safe.',
+    safetyNote: 'Do not intentionally dry out leftover paint for easier disposal in the trash, as this is prohibited against official California rules.',
     sources: 
     [
       {
@@ -710,13 +712,14 @@ const catalog = [
     name: 'Oil-Based Paint',
     icon: PaintBucket,
 
-    summary: 'Do not place latex paint in the trash, curbside recycling, or down the drain. Take it to an approved recycling location, paint drop-off site, or hazardous waste collector.',
+    summary: 'Do not place oil-based paint in the trash, curbside recycling, or down the drain. Take it to an approved recycling location, paint drop-off site, or hazardous waste collection center.',
     instructions: [
-      'Keep the paint in its original container with the lid tightly sealed.',
-      'Take the leftover paint to a PaintCare site or hazardous waste collection center that accepts paint.',
+      'Keep the paint in its original labeled container with the lid tightly sealed.',
+      'Do not pour it into a drain or sink, mix with other chemicals, or transfer it to another container.',
+      'Take the leftover paint to a PaintCare site or a household hazardous waste collection center that accepts paint.',
     ],
 
-    safetyNote: 'Do not intentionally dry out leftover paint for easier disposal in the trash, as this can create a hazard and is not environmentally safe.',
+    safetyNote: 'Oil-based paint can contain flammable solvents and other hazardous materials. Keep the container away from heat, open flames, and children.',
     sources: 
     [
       {
@@ -736,7 +739,6 @@ const catalog = [
   'oil paint',
   'oil based paint',
   'oil-based paint',
-  'alkyd paint',
   'solvent based paint',
   'solvent-based paint',
   'enamel paint',
@@ -749,26 +751,23 @@ const catalog = [
     name: 'Cleaning Chemicals',
     icon: SprayCan,
 
-    summary: 'Do not place latex paint in the trash, curbside recycling, or down the drain. Take it to an approved recycling location, paint drop-off site, or hazardous waste collector.',
+    summary: 'Do not place hazardous household cleaners in the trash, curbside recycling, or down the drain. Take them to a hazardous waste collection center.',
     instructions: [
-      'Keep the paint in its original container with the lid tightly sealed.',
-      'Take the leftover paint to a PaintCare site or hazardous waste collection center that accepts paint.',
+      'Keep the cleaner in its original labeled container with the lid tightly sealed.',
+      'Do not pour it into a drain or sink, mix with other chemicals, or transfer it to another container.',
+      'Take the cleaning chemicals to a household hazardous waste collection center.',
     ],
 
-    safetyNote: 'Do not intentionally dry out leftover paint for easier disposal in the trash, as this can create a hazard and is not environmentally safe.',
+    safetyNote: 'Some household cleaning chemicals can be corrosive or toxic. Never mix products such as bleach and ammonia together, and keep flammable chemicals away from heat, flames, children, and pets.',
     sources: 
     [
       {
-        name: 'CalRecycle - Paint Management',
-        url: 'https://calrecycle.ca.gov/Paint/',
+        name: 'CalRecycle - Wastes Banned From the Trash',
+        url: 'https://calrecycle.ca.gov/homehazwaste/info/',
       },
       {
         name: 'OC Waste & Recycling - Household Hazardous Waste',
         url: 'https://oclandfills.com/hazardous-waste',
-      },
-      {
-        name: 'PaintCare - California Paint Recycling',
-        url: 'https://www.paintcare.org/states/california/',
       },
     ],
     aliases: [
@@ -789,26 +788,23 @@ const catalog = [
     name: 'Pesticides & Herbicides',
     icon: FlaskConical,
 
-    summary: 'Do not place latex paint in the trash, curbside recycling, or down the drain. Take it to an approved recycling location, paint drop-off site, or hazardous waste collector.',
+    summary: 'Do not place pesticides or herbicides in the trash, curbside recycling, or down the drain. Take them to a hazardous waste collection center.',
     instructions: [
-      'Keep the paint in its original container with the lid tightly sealed.',
-      'Take the leftover paint to a PaintCare site or hazardous waste collection center that accepts paint.',
+      'Keep the pesticide or herbicide in its original labeled container with the lid tightly sealed.',
+      'Do not pour it into a drain or sink, mix with other chemicals, or transfer it to another container.',
+      'Take leftover pesticides or herbicides to a household hazardous waste collection center.',
     ],
 
-    safetyNote: 'Do not intentionally dry out leftover paint for easier disposal in the trash, as this can create a hazard and is not environmentally safe.',
+    safetyNote: 'Pesticides and herbicides can be toxic to people, pets, and the environment. Avoid contact with skin or eyes, and follow provided safety instructions if given on the original container.',
     sources: 
     [
       {
-        name: 'CalRecycle - Paint Management',
-        url: 'https://calrecycle.ca.gov/Paint/',
+        name: 'CalRecycle - Wastes Banned From the Trash',
+        url: 'https://calrecycle.ca.gov/homehazwaste/info/',
       },
       {
         name: 'OC Waste & Recycling - Household Hazardous Waste',
         url: 'https://oclandfills.com/hazardous-waste',
-      },
-      {
-        name: 'PaintCare - California Paint Recycling',
-        url: 'https://www.paintcare.org/states/california/',
       },
     ],
     aliases: [
@@ -829,26 +825,23 @@ const catalog = [
     name: 'Solvents & Adhesives',
     icon: PaintBucket,
 
-    summary: 'Do not place oil-based paint in the trash, curbside recycling, or down the drain. Take it to an approved recycling location, paint drop-off site, or hazardous waste collector.',
+    summary: 'Do not place solvents or adhesives in the trash, curbside recycling, or down the drain. Take it to a hazardous waste collection center.',
     instructions: [
-      'Keep the paint in its original container with the lid tightly sealed.',
-      'Take the leftover paint to a PaintCare site or hazardous waste collection center that accepts paint.',
+      'Keep the solvent or adhesive in its original labeled container with the lid tightly sealed.',
+      'Do not pour it into a drain or sink, mix with other chemicals, or transfer it to another container.',
+      'Take leftover solvents or adhesives to a household hazardous waste collection center.',
     ],
 
-    safetyNote: 'Do not intentionally dry out leftover paint for easier disposal in the trash, as this can create a hazard and is not environmentally safe.',
+    safetyNote: 'Many solvents and adhesives can be flammable and release harmful fumes. Keep them away from heat and flames, only use in properly ventilated areas, and avoid skin or eye contact.',
     sources: 
     [
       {
-        name: 'CalRecycle - Paint Management',
-        url: 'https://calrecycle.ca.gov/Paint/',
+        name: 'CalRecycle - Wastes Banned From the Trash',
+        url: 'https://calrecycle.ca.gov/homehazwaste/info/',
       },
       {
         name: 'OC Waste & Recycling - Household Hazardous Waste',
         url: 'https://oclandfills.com/hazardous-waste',
-      },
-      {
-        name: 'PaintCare - California Paint Recycling',
-        url: 'https://www.paintcare.org/states/california/',
       },
     ],
     aliases: [
