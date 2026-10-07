@@ -555,7 +555,7 @@ const catalog = [
     name: 'TVs & Monitors',
     icon: Monitor,
 
-    summary: 'Do not place TVs or in the trash or curbside recycling. Take them to an authorized e-waste collector/recycler or household hazardous waste collection center.',
+    summary: 'Do not place TVs or monitors in the trash or curbside recycling. Take them to an authorized e-waste collector/recycler or household hazardous waste collection center.',
     instructions: [
       'Keep the TV or monitor intact and undamaged if possible, and do not crush, puncture, open, or damage it before recycling.',
       'Take the device to an authorized e-waste collector/recycler, retailer, or hazardous waste collection center that accepts electronic waste.',
@@ -590,7 +590,7 @@ const catalog = [
     name: 'Cables & Chargers',
     icon: Cable,
 
-    summary: 'Do not place cables or chargers in curbside recycling. Recyle them through an e-waste or electronics recycling program that accepits these items whenever possible.',
+    summary: 'Do not place cables or chargers in curbside recycling. Recycle them through an e-waste or electronics recycling program that accepts these items whenever possible.',
     instructions: [
       'Keep the item intact and undamaged if possible, and do not puncture, open, or damage it before recycling.',
       'Check with an electronics recycling program or e-waste collection location to confirm that it accepts cables or chargers.',
@@ -825,7 +825,7 @@ const catalog = [
     name: 'Solvents & Adhesives',
     icon: PaintBucket,
 
-    summary: 'Do not place solvents or adhesives in the trash, curbside recycling, or down the drain. Take it to a hazardous waste collection center.',
+    summary: 'Do not place hazardous solvents or adhesives in the trash, curbside recycling, or down the drain. Take it to a hazardous waste collection center.',
     instructions: [
       'Keep the solvent or adhesive in its original labeled container with the lid tightly sealed.',
       'Do not pour it into a drain or sink, mix with other chemicals, or transfer it to another container.',
@@ -863,6 +863,43 @@ const catalog = [
     type: 'subcategory',
     name: 'Medication',
     icon: Pill,
+
+    summary: 'Do not flush unused or expired medication unless it is specifically listed on the FDA flush list. The preferred disposal method for most medication is to take it to a drug take-back location or mail-back program.',
+    instructions: [
+      'Keep the medication in its original labeled container, and remove or cover personal information on prescription labels.',
+      'Take the medication to an authorized drug take-back location or use an approved mail-back program whenever possible.',
+      'If a take-back or mail-back option is not available, follow the disposal instructions provided by the medication or FDA guidance on that specific medicine.',
+    ],
+
+    safetyNote: 'Unused or expired medication can be harmful if accidentally taken by children, pets, or for whom it was not prescribed to. Do not flush medication unless the FDA specifically recommends or allows flushing it.',
+    sources: 
+    [
+      {
+        name: 'U.S. FDA - Disposal of Unused Medicines',
+        url: 'https://www.fda.gov/drugs/safe-disposal-medicines/disposal-unused-medicines-what-you-should-know',
+      },
+      {
+        name: 'U.S. FDA - Drug Take-Back Options',
+        url: 'https://www.fda.gov/drugs/disposal-unused-medicines-what-you-should-know/drug-disposal-drug-take-back-options',
+      },
+      {
+        name: 'U.S. FDA - Flush List',
+        url: 'https://www.fda.gov/drugs/disposal-unused-medicines-what-you-should-know/drug-disposal-fdas-flush-list-certain-medicines',
+      },
+    ],
+    aliases: [
+  'medicine',
+  'medication',
+  'prescription medicine',
+  'prescription medication',
+  'prescription drugs',
+  'over the counter medicine',
+  'otc medicine',
+  'pills',
+  'tablets',
+  'capsules',
+  'expired medicine',
+],
   },
   {
     id: 'needles-syringes',
@@ -870,6 +907,43 @@ const catalog = [
     type: 'subcategory',
     name: 'Needles & Syringes',
     icon: Syringe,
+
+    summary: 'Do not place needles or syringes in the trash, curbside recycling, or down the toilet. Place used sharps in an approved sharps disposal container and use an appropriate sharps disposal program.',
+    instructions: [
+      'Immediately place used needles and syringes in an FDA-cleared sharps disposal container after use.',
+      'Do not bend, break, recap, remove, or otherwise tamper with used needles before placing them in the sharps container.',
+      'When the sharps container is about three-quarters full, stop adding items, securely close it, and dispose of it through an approved sharps collection, mail-back, or local disposal program.',
+    ],
+
+    safetyNote: 'Loose or improperly handled needles or syringes can cause puncture injuries and spread infections. Keep them away from children and pets.',
+    sources: 
+    [
+      {
+        name: 'U.S. FDA - Best Way to Get Rid of Used Needles and Sharps',
+        url: 'https://www.fda.gov/medical-devices/safely-using-sharps-needles-and-syringes-home-work-and-travel/best-way-get-rid-used-needles-and-other-sharps',
+      },
+      {
+        name: 'U.S. FDA - Sharps Disposal Containers',
+        url: 'https://www.fda.gov/medical-devices/safely-using-sharps-needles-and-syringes-home-work-and-travel/sharps-disposal-containers',
+      },
+      {
+        name: 'CalRecycle - Sharps Waste Stewardship',
+        url: 'https://calrecycle.ca.gov/epr/pharmasharps/sharps/',
+      },
+    ],
+    aliases: [
+  'needle',
+  'needles',
+  'syringe',
+  'syringes',
+  'used needle',
+  'used syringe',
+  'medical needle',
+  'injection needle',
+  'insulin needle',
+  'insulin syringe',
+  'sharps',
+],
   },
   {
     id: 'lancets',
@@ -877,6 +951,41 @@ const catalog = [
     type: 'subcategory',
     name: 'Lancets',
     icon: Syringe,
+
+    summary: 'Do not place lancets in the trash, curbside recycling, or down the toilet. Place used lancets in an approved sharps disposal package/container and use an appropriate sharps disposal program.',
+    instructions: [
+      'Immediately place used lancets in an FDA-cleared sharps disposal container after use.',
+      'Do not bend, break, recap, or tamper with the sharp portion of a lancet before placing them in the sharps container.',
+      'When the sharps container is about three-quarters full, stop adding items, securely close it, and dispose of it through an approved sharps collection, mail-back, or local disposal program.',
+    ],
+
+    safetyNote: 'Loose or improperly handled lancets can cause puncture injuries and spread infections. Keep them away from children and pets.',
+    sources: 
+    [
+      {
+        name: 'U.S. FDA - Safe Use and Disposal of Sharps',
+        url: 'https://www.fda.gov/medical-devices/consumer-products/safely-using-sharps-needles-and-syringes-home-work-and-travel',
+      },
+      {
+        name: 'U.S. FDA - Sharps Disposal Containers',
+        url: 'https://www.fda.gov/medical-devices/safely-using-sharps-needles-and-syringes-home-work-and-travel/sharps-disposal-containers',
+      },
+      {
+        name: 'CalRecycle - Sharps Waste Stewardship',
+        url: 'https://calrecycle.ca.gov/epr/pharmasharps/sharps/',
+      },
+    ],
+    aliases: [
+  'lancet',
+  'lancets',
+  'fingerstick',
+  'finger stick',
+  'blood testing lancet',
+  'diabetes lancet',
+  'glucose lancet',
+  'blood sugar lancet',
+  'sharps',
+],
   },
   {
     id: 'inhalers',
@@ -884,6 +993,35 @@ const catalog = [
     type: 'subcategory',
     name: 'Inhalers',
     icon: Wind,
+
+    summary: 'Do not dispose of an inhaler until you have checked the product instructions or local disposal requirements. Some inhalers are pressurized and may require special disposal.',
+    instructions: [
+      'Keep the inhaler intact and do not puncture, crush, burn, or dismantle the canister.',
+      'Check the inhaler label, packaging, or manufacturer instructions for disposal directions.',
+      'If no specific disposal instructions are provided, contact a pharmacy, local waste program, or household hazardous waste collection center to confirm the proper disposal method.',
+    ],
+
+    safetyNote: 'Some inhalers contain pressurized canisters that can burst if punctured, crushed, or exposed to high heat. Keep them away from heat, open flames, children, and pets.',
+    sources: 
+    [
+      {
+        name: 'U.S. FDA - Drug Disposal Questions and Answers',
+        url: 'https://www.fda.gov/drugs/disposal-unused-medicines-what-you-should-know/drug-disposal-questions-and-answers',
+      },
+      {
+        name: 'OC Waste & Recycling - Household Hazardous Waste',
+        url: 'https://oclandfills.com/hazardous-waste',
+      },
+    ],
+    aliases: [
+  'inhaler',
+  'asthma inhaler',
+  'rescue inhaler',
+  'metered dose inhaler',
+  'mdi inhaler',
+  'albuterol inhaler',
+  'inhaler canister',
+],
   },
 
   // Automotive subcategories
@@ -893,6 +1031,40 @@ const catalog = [
     type: 'subcategory',
     name: 'Motor Oil & Filters',
     icon: Droplets,
+
+    summary:
+    'Do not place used motor oil or oil filters in the trash, curbside recycling, or down the drain. Take them to a certified used-oil collection center that accepts them or a household hazardous waste collection center.',
+    instructions: [
+      'Store used motor oil in a clean, sturdy, leak-proof container with a tightly closed lid.',
+      'Do not mix used motor oil with other fluids or chemicals.',
+      'Take the used oil and oil filters to a certified used-oil collection center or household hazardous waste collection center that accepts them.',
+    ],
+    safetyNote:
+      'Used motor oil can contain harmful contaminants. Avoid skin contact, clean up spills promptly, and keep containers away from children and pets.',
+    sources: [
+      {
+        name: 'CalRecycle - Used Oil Recycling Program',
+        url: 'https://calrecycle.ca.gov/usedoil/',
+      },
+      {
+        name: 'CalRecycle - Certified Collection Centers',
+        url: 'https://calrecycle.ca.gov/usedoil/certcenters/',
+      },
+      {
+        name: 'OC Waste & Recycling - Household Hazardous Waste',
+        url: 'https://oclandfills.com/hazardous-waste',
+      },
+    ],
+    aliases: [
+      'motor oil',
+      'used motor oil',
+      'engine oil',
+      'car oil',
+      'oil filter',
+      'oil filters',
+      'used oil filter',
+      'automotive oil',
+    ],
   },
   {
     id: 'antifreeze-coolant',
@@ -900,6 +1072,34 @@ const catalog = [
     type: 'subcategory',
     name: 'Antifreeze & Coolant',
     icon: Snowflake,
+
+    summary:
+    'Do not place antifreeze or coolant in the trash, curbside recycling, or down the drain. Take it to a household hazardous waste collection center or another approved collection location.',
+    instructions: [
+      'Store antifreeze or coolant in a sturdy, leak-proof container with a tightly closed lid.',
+      'Do not mix antifreeze or coolant with motor oil, fuel, or other chemicals.',
+      'Take the antifreeze or coolant to a household hazardous waste collection center or approved collection location that accepts automotive fluids.',
+    ],
+    safetyNote:
+      'Antifreeze can be toxic if swallowed. Avoid skin or eye contact and keep it away from children and pets.',
+    sources: [
+      {
+        name: 'CalRecycle - Wastes Banned From the Trash',
+        url: 'https://calrecycle.ca.gov/homehazwaste/info/',
+      },
+      {
+        name: 'OC Waste & Recycling - Household Hazardous Waste',
+        url: 'https://oclandfills.com/hazardous-waste',
+      },
+    ],
+    aliases: [
+      'antifreeze',
+      'coolant',
+      'engine coolant',
+      'radiator fluid',
+      'radiator coolant',
+      'car coolant',
+    ],
   },
   {
     id: 'gasoline-fuel',
@@ -907,6 +1107,40 @@ const catalog = [
     type: 'subcategory',
     name: 'Gasoline & Fuel',
     icon: Fuel,
+
+    summary:
+    'Do not place gasoline or other unwanted fuel in the trash, curbside recycling, or down the drain. Take it to a household hazardous waste collection center that accepts fuel.',
+    instructions: [
+      'Keep gasoline or fuel in a sturdy, tightly closed container designed or approved for fuel storage.',
+      'Do not mix gasoline or fuel with motor oil, antifreeze, or other chemicals.',
+      'Take unwanted gasoline or fuel to a household hazardous waste collection center that accepts flammable liquids.',
+    ],
+    safetyNote:
+      'Gasoline and other fuels are highly flammable and can release harmful vapors. Keep them away from heat, sparks, open flames, children, and pets.',
+    sources: [
+      {
+        name: 'CalRecycle - Household Hazardous Waste',
+        url: 'https://calrecycle.ca.gov/homehazwaste/',
+      },
+      {
+        name: 'CalRecycle - Household Hazardous Waste Reporting',
+        url: 'https://calrecycle.ca.gov/homehazwaste/reporting/',
+      },
+      {
+        name: 'OC Waste & Recycling - Household Hazardous Waste',
+        url: 'https://oclandfills.com/hazardous-waste',
+      },
+    ],
+    aliases: [
+      'gasoline',
+      'gas',
+      'fuel',
+      'old gasoline',
+      'old gas',
+      'petrol',
+      'automotive fuel',
+      'lawn mower gas',
+    ],
   },
   {
     id: 'tires',
@@ -914,6 +1148,38 @@ const catalog = [
     type: 'subcategory',
     name: 'Tires',
     icon: CircleGauge,
+
+    summary:
+    'Do not place tires in the trash or curbside recycling. Take unwanted tires to a tire dealer, authorized waste-tire collection location, or other approved tire recycling facility.',
+    instructions: [
+      'Keep the tire intact and avoid illegally dumping or burning it.',
+      'Contact a tire dealer or authorized waste-tire collection location to confirm that it accepts used tires.',
+      'Take the tire to an approved location for reuse, recycling, or proper disposal.',
+    ],
+    safetyNote:
+      'Improperly stored or discarded tires can collect standing water, attract pests, and create serious fire hazards. Store them safely until they can be taken to an approved location.',
+    sources: [
+      {
+        name: 'CalRecycle - Wastes Banned From the Trash',
+        url: 'https://calrecycle.ca.gov/homehazwaste/info/',
+      },
+      {
+        name: 'CalRecycle - Waste Tire Facilities',
+        url: 'https://calrecycle.ca.gov/tires/facilities/',
+      },
+    ],
+    aliases: [
+      'tire',
+      'tires',
+      'car tire',
+      'car tires',
+      'vehicle tire',
+      'vehicle tires',
+      'used tire',
+      'used tires',
+      'waste tire',
+      'scrap tire',
+    ],
   },
 
   // Appliances subcategories
@@ -923,6 +1189,36 @@ const catalog = [
     type: 'subcategory',
     name: 'Refrigerators & Freezers',
     icon: Refrigerator,
+
+    summary:
+    'Do not place refrigerators or freezers in the trash or curbside recycling. Use an appliance recycling, retailer take-back, utility pickup, or local bulky-item program that can properly handle refrigerants.',
+    instructions: [
+      'Keep the appliance intact and do not cut refrigerant lines, remove the compressor, or attempt to release the refrigerant.',
+      'Check with your local waste provider, utility company, appliance retailer, or recycling program for an approved pickup or drop-off option.',
+      'Make sure the appliance is handled by a program or facility that properly recovers the refrigerant before final recycling or disposal.',
+    ],
+    safetyNote:
+      'Refrigerators and freezers can contain refrigerants and other components that require special handling. Do not puncture refrigerant lines or attempt to remove refrigerant yourself.',
+    sources: [
+      {
+        name: 'U.S. EPA - Appliance Disposal',
+        url: 'https://www.epa.gov/section608/appliance-disposal',
+      },
+      {
+        name: 'U.S. EPA - Safe Disposal of Refrigerant Appliances',
+        url: 'https://www.epa.gov/section608/stationary-refrigeration-safe-disposal-requirements',
+      },
+    ],
+    aliases: [
+      'refrigerator',
+      'fridge',
+      'freezer',
+      'refrigerators',
+      'freezers',
+      'old fridge',
+      'old refrigerator',
+      'mini fridge',
+    ],
   },
   {
     id: 'air-conditioners',
@@ -930,6 +1226,35 @@ const catalog = [
     type: 'subcategory',
     name: 'Air Conditioners',
     icon: Snowflake,
+
+    summary:
+    'Do not place air conditioners in the trash or curbside recycling. Use an appliance recycling, retailer take-back, or local bulky-item program that can properly handle refrigerants.',
+    instructions: [
+      'Keep the appliance intact and do not cut refrigerant lines, remove components, or attempt to release the refrigerant.',
+      'Check with your local waste provider, appliance retailer, or recycling program for an approved pickup or drop-off option.',
+      'Make sure the appliance is handled by a program or facility that properly recovers the refrigerant before final recycling or disposal.',
+    ],
+    safetyNote:
+      'Air conditioners can contain refrigerants that require special handling. Do not puncture refrigerant lines or attempt to remove refrigerant yourself.',
+    sources: [
+      {
+        name: 'U.S. EPA - Appliance Disposal',
+        url: 'https://www.epa.gov/section608/appliance-disposal',
+      },
+      {
+        name: 'U.S. EPA - Safe Disposal of Refrigerant Appliances',
+        url: 'https://www.epa.gov/section608/stationary-refrigeration-safe-disposal-requirements',
+      },
+    ],
+    aliases: [
+      'air conditioner',
+      'air conditioning unit',
+      'ac unit',
+      'a/c unit',
+      'window ac',
+      'window air conditioner',
+      'portable air conditioner',
+    ],
   },
   {
     id: 'washers-dryers',
@@ -937,6 +1262,35 @@ const catalog = [
     type: 'subcategory',
     name: 'Washers & Dryers',
     icon: WashingMachine,
+
+    summary:
+    'Do not place washers or dryers in curbside recycling. Use a bulky-item pickup, appliance recycling program, retailer take-back service, or approved scrap/recycling facility.',
+    instructions: [
+      'Disconnect the appliance safely from water, electricity, or gas before moving it.',
+      'If the appliance still works, consider donating or reusing it before recycling or disposal.',
+      'Arrange pickup or drop-off through a local bulky-item service, appliance recycler, retailer, or approved recycling facility.',
+    ],
+    safetyNote:
+      'Washers and dryers are heavy and can cause injury if moved improperly. Gas dryers should be disconnected safely, and electrical appliances should be unplugged before handling.',
+    sources: [
+      {
+        name: 'CalRecycle - Major Appliances',
+        url: 'https://www2.calrecycle.ca.gov/WasteCharacterization/MaterialType/Details/19',
+      },
+      {
+        name: 'U.S. EPA - Household Appliances',
+        url: 'https://www.epa.gov/large-scale-residential-demolition/household-appliances-and-demolition',
+      },
+    ],
+    aliases: [
+      'washer',
+      'washing machine',
+      'dryer',
+      'clothes dryer',
+      'washer dryer',
+      'laundry machine',
+      'laundry appliance',
+    ],
   },
   {
     id: 'microwaves-ovens',
@@ -944,6 +1298,35 @@ const catalog = [
     type: 'subcategory',
     name: 'Microwaves & Ovens',
     icon: Microwave,
+
+    summary:
+    'Do not place microwaves or ovens in curbside recycling. Use an appliance recycling program, bulky-item pickup service, retailer take-back option, or approved recycling facility.',
+    instructions: [
+      'Unplug the appliance and safely disconnect any gas or electrical connections before moving it.',
+      'If the appliance still works, consider donating or reusing it before recycling or disposal.',
+      'Arrange pickup or drop-off through a local bulky-item service, appliance recycler, retailer, or approved recycling facility.',
+    ],
+    safetyNote:
+      'Microwaves and ovens can contain electrical components and may be heavy or difficult to move. Do not dismantle the appliance, and make sure gas appliances are disconnected safely.',
+    sources: [
+      {
+        name: 'CalRecycle - Major Appliances',
+        url: 'https://www2.calrecycle.ca.gov/WasteCharacterization/MaterialType/Details/19',
+      },
+      {
+        name: 'California Appliance Material Definitions',
+        url: 'https://www2.calrecycle.ca.gov/Docs/Web/120138',
+      },
+    ],
+    aliases: [
+      'microwave',
+      'microwave oven',
+      'oven',
+      'stove',
+      'range',
+      'electric oven',
+      'gas oven',
+    ],
   },
   {
     id: 'small-appliances',
@@ -951,6 +1334,37 @@ const catalog = [
     type: 'subcategory',
     name: 'Small Appliances',
     icon: CookingPot,
+
+    summary:
+    'Do not place small appliances in curbside recycling. Reuse, donate, or recycle them through an appropriate appliance, electronics, or scrap recycling program when possible.',
+    instructions: [
+      'Unplug the appliance and remove any removable batteries before recycling, if they can be safely removed.',
+      'If the appliance still works, consider donating or reusing it before disposal.',
+      'Check with a local appliance, electronics, or scrap recycling program to confirm that it accepts the item.',
+    ],
+    safetyNote:
+      'Do not use appliances with damaged cords, exposed wiring, or other electrical damage. Keep damaged appliances unplugged until they can be properly recycled or disposed of.',
+    sources: [
+      {
+        name: 'California Appliance Material Definitions',
+        url: 'https://www2.calrecycle.ca.gov/Docs/Web/120138',
+      },
+      {
+        name: 'CalRecycle - Waste Characterization',
+        url: 'https://www2.calrecycle.ca.gov/WasteCharacterization/MaterialType',
+      },
+    ],
+    aliases: [
+      'small appliance',
+      'toaster',
+      'blender',
+      'coffee maker',
+      'electric kettle',
+      'hair dryer',
+      'vacuum',
+      'vacuum cleaner',
+      'kitchen appliance',
+    ],
   },
 
   // Furniture/bulky items subcategories
@@ -960,6 +1374,31 @@ const catalog = [
     type: 'subcategory',
     name: 'Couches & Sofas',
     icon: Armchair,
+
+    summary:
+    'Do not place couches or sofas in curbside recycling. If the item is still usable, consider donating or reusing it. Otherwise, arrange a bulky-item pickup or take it to an approved disposal facility.',
+    instructions: [
+      'If the couch or sofa is clean and in usable condition, consider donating or reusing it before disposal.',
+      'Contact your local waste hauler to ask about bulky-item pickup options and preparation requirements.',
+      'If pickup is not available, take the item to an approved landfill, transfer station, or other disposal facility that accepts bulky furniture.',
+    ],
+    safetyNote:
+      'Couches and sofas can be heavy and difficult to move. Use proper lifting techniques and get help when moving large or bulky furniture.',
+    sources: [
+      {
+        name: 'OC Waste & Recycling - Landfill Fees and Bulky Items',
+        url: 'https://oclandfills.com/landfills/landfill-fees',
+      },
+    ],
+    aliases: [
+      'couch',
+      'sofa',
+      'sectional',
+      'couches',
+      'sofas',
+      'old couch',
+      'old sofa',
+    ],
   },
   {
     id: 'chairs-tables',
@@ -967,6 +1406,32 @@ const catalog = [
     type: 'subcategory',
     name: 'Chairs & Tables',
     icon: RockingChair,
+
+    summary:
+    'Do not place large chairs or tables in curbside recycling. If the item is still usable, consider donating or reusing it. Otherwise, arrange a bulky-item pickup or take it to an approved disposal facility.',
+    instructions: [
+      'If the chair or table is clean and in usable condition, consider donating or reusing it before disposal.',
+      'Contact your local waste hauler to ask about bulky-item pickup options and preparation requirements.',
+      'If pickup is not available, take the item to an approved landfill, transfer station, or other disposal facility that accepts bulky furniture.',
+    ],
+    safetyNote:
+      'Large chairs and tables can be heavy or awkward to move. Use proper lifting techniques and get help when moving large or bulky furniture.',
+    sources: [
+      {
+        name: 'OC Waste & Recycling - Landfill Fees and Bulky Items',
+        url: 'https://oclandfills.com/landfills/landfill-fees',
+      },
+    ],
+    aliases: [
+      'chair',
+      'chairs',
+      'table',
+      'tables',
+      'dining table',
+      'desk',
+      'wooden chair',
+      'furniture',
+    ],
   },
   {
     id: 'mattresses',
@@ -974,6 +1439,35 @@ const catalog = [
     type: 'subcategory',
     name: 'Mattresses',
     icon: BedDouble,
+
+    summary:
+    'Do not place mattresses in curbside recycling. Use a mattress recycling drop-off site, retailer take-back service, or local bulky-item pickup program.',
+    instructions: [
+      'Keep the mattress separate from other trash or waste when taking it to a mattress recycling location.',
+      'Check for a nearby mattress recycling site or contact your local waste hauler about bulky-item pickup.',
+      'If you are purchasing a new mattress, ask the retailer about taking back your old mattress when the new one is delivered.',
+    ],
+    safetyNote:
+      'Do not illegally dump or burn mattresses. Heavily soiled or contaminated mattresses may not be accepted by some recycling programs, so confirm requirements before drop-off.',
+    sources: [
+      {
+        name: 'CalRecycle - Mattress Product Management',
+        url: 'https://calrecycle.ca.gov/mattresses/',
+      },
+      {
+        name: 'OC Waste & Recycling - Mattress Recycling Program',
+        url: 'https://www.oclandfills.com/mattress',
+      },
+    ],
+    aliases: [
+      'mattress',
+      'mattresses',
+      'box spring',
+      'box springs',
+      'futon',
+      'bed mattress',
+      'old mattress',
+    ],
   },
   {
     id: 'carpets-rugs',
@@ -981,6 +1475,36 @@ const catalog = [
     type: 'subcategory',
     name: 'Carpets & Rugs',
     icon: RectangleHorizontal,
+
+    summary:
+    'Do not place large carpets or rugs in curbside recycling. If they are still usable, consider donating or reusing them. Otherwise, use a carpet recycling program, bulky-item pickup service, or approved disposal facility.',
+    instructions: [
+      'If the carpet or rug is clean and reusable, consider donating or reusing it before disposal.',
+      'For carpet, check for a recycling program or facility that accepts postconsumer carpet.',
+      'If recycling is not available, contact your local waste hauler about bulky-item pickup or take the item to an approved disposal facility.',
+    ],
+    safetyNote:
+      'Large carpets and rugs can be heavy and difficult to move. Roll and secure them when possible, and use proper lifting techniques when handling bulky material.',
+    sources: [
+      {
+        name: 'CalRecycle - Carpet Materials Management',
+        url: 'https://calrecycle.ca.gov/carpet/',
+      },
+      {
+        name: 'OC Waste & Recycling - Landfill Fees and Bulky Items',
+        url: 'https://oclandfills.com/landfills/landfill-fees',
+      },
+    ],
+    aliases: [
+      'carpet',
+      'carpets',
+      'rug',
+      'rugs',
+      'area rug',
+      'floor carpet',
+      'old carpet',
+      'old rug',
+    ],
   }
 ]
 
