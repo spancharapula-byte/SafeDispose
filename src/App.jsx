@@ -1523,22 +1523,23 @@ const disposalLocations = [
       'lithium-ion-batteries',
       'button-coin-batteries',
       'car-batteries',
-
       'cfl-bulbs',
       'led-bulbs',
       'fluorescent-tubes',
-
       'phones-tablets',
       'laptops-computers',
       'tvs-monitors',
       'cables-chargers',
       'small-electronics-accessories',
-
       'latex-paint',
       'oil-based-paint',
       'cleaning-chemicals',
       'pesticides-herbicides',
       'solvents-adhesives',
+      'needles-syringes',
+      'lancets',
+      'antifreeze-coolant',
+      'gasoline-fuel',
     ],
 
     hours: 'Tuesday–Saturday, 9 AM–3 PM',
@@ -1560,22 +1561,23 @@ const disposalLocations = [
       'lithium-ion-batteries',
       'button-coin-batteries',
       'car-batteries',
-
       'cfl-bulbs',
       'led-bulbs',
       'fluorescent-tubes',
-
       'phones-tablets',
       'laptops-computers',
       'tvs-monitors',
       'cables-chargers',
       'small-electronics-accessories',
-
       'latex-paint',
       'oil-based-paint',
       'cleaning-chemicals',
       'pesticides-herbicides',
       'solvents-adhesives',
+      'needles-syringes',
+      'lancets',
+      'antifreeze-coolant',
+      'gasoline-fuel',
     ],
 
     hours: 'Tuesday–Saturday, 9 AM–3 PM',
@@ -1596,22 +1598,23 @@ const disposalLocations = [
     'lithium-ion-batteries',
     'button-coin-batteries',
     'car-batteries',
-
     'cfl-bulbs',
     'led-bulbs',
     'fluorescent-tubes',
-
     'phones-tablets',
     'laptops-computers',
     'tvs-monitors',
     'cables-chargers',
     'small-electronics-accessories',
-
     'latex-paint',
     'oil-based-paint',
     'cleaning-chemicals',
     'pesticides-herbicides',
     'solvents-adhesives',
+    'needles-syringes',
+    'lancets',
+    'antifreeze-coolant',
+    'gasoline-fuel',
   ],
 
   hours: 'Tuesday–Saturday, 9 AM–3 PM',
@@ -1633,28 +1636,262 @@ const disposalLocations = [
     'lithium-ion-batteries',
     'button-coin-batteries',
     'car-batteries',
-
     'cfl-bulbs',
     'led-bulbs',
     'fluorescent-tubes',
-
     'phones-tablets',
     'laptops-computers',
     'tvs-monitors',
     'cables-chargers',
     'small-electronics-accessories',
-
     'latex-paint',
     'oil-based-paint',
     'cleaning-chemicals',
     'pesticides-herbicides',
     'solvents-adhesives',
+    'needles-syringes',
+    'lancets',
+    'antifreeze-coolant',
+    'gasoline-fuel',
   ],
 
   hours: 'Tuesday–Saturday, 9 AM–3 PM',
 
   website:
     'https://www.oclandfills.com/hazardous-waste',
+},
+{
+  id: 'paintcare-dunn-edwards-garden-grove',
+  name: 'Dunn-Edwards Paints - Garden Grove',
+  shortName: 'Dunn-Edwards Garden Grove',
+  address: '13011 Brookhurst St, Garden Grove, CA 92843',
+  type: 'PaintCare Drop-Off',
+
+  acceptedItemIds: [
+    'latex-paint',
+    'oil-based-paint',
+  ],
+
+  hours: 'Mon–Sat 6 AM–5 PM; Sun 10 AM–3 PM',
+
+  website:
+    'https://www.paintcare.org/drop-off-sites/',
+},
+{
+  id: 'paintcare-dunn-edwards-tustin',
+  name: 'Dunn-Edwards Paints - Tustin',
+  shortName: 'Dunn-Edwards Tustin',
+  address: '13662 Newport Ave, Tustin, CA 92780',
+  type: 'PaintCare Drop-Off',
+
+  acceptedItemIds: [
+    'latex-paint',
+    'oil-based-paint',
+  ],
+
+  hours: 'Mon–Sat 6 AM–5 PM; Sun 7 AM–3 PM',
+
+  website:
+    'https://www.paintcare.org/drop-off-sites/',
+},
+{
+  id: 'techwaste-santa-ana',
+  name: 'TechWaste Recycling Inc.',
+  shortName: 'TechWaste Recycling',
+  address: '1940 E Occidental St, Santa Ana, CA 92705',
+  type: 'E-Waste Recycling Center',
+
+  acceptedItemIds: [
+    'phones-tablets',
+    'laptops-computers',
+    'tvs-monitors',
+    'cables-chargers',
+    'small-electronics-accessories',
+  ],
+
+  hours: 'Mon–Fri 8 AM–4:30 PM',
+
+  website:
+    'https://www.techwasterecycling.com/',
+},
+{
+  id: 'ezpc-recycle-santa-ana',
+  name: 'EZPC Recycle',
+  shortName: 'EZPC Recycle',
+  address: '2518 W 5th St, Santa Ana, CA 92703',
+  type: 'E-Waste Recycling Center',
+
+  acceptedItemIds: [
+    'phones-tablets',
+    'laptops-computers',
+    'tvs-monitors',
+    'cables-chargers',
+    'small-electronics-accessories',
+  ],
+
+  hours: 'Mon–Fri 8 AM–4 PM',
+
+  website:
+    'https://www.ezpcrecycle.com/',
+},
+{
+  id: 'silicon-salvage-anaheim',
+  name: 'Silicon Salvage Inc.',
+  shortName: 'Silicon Salvage',
+  address: '1500 N Dale Ave, Anaheim, CA 92801',
+  type: 'E-Waste Recycling Center',
+
+  acceptedItemIds: [
+    'phones-tablets',
+    'laptops-computers',
+    'tvs-monitors',
+    'cables-chargers',
+    'small-electronics-accessories',
+  ],
+
+  hours: 'Mon–Fri 8 AM–4 PM',
+
+  website:
+    'https://www.siliconsalvage.com/',
+},
+{
+  id: 'beachside-recycling-huntington-beach',
+  name: 'Beachside Recycling',
+  shortName: 'Beachside Recycling',
+  address: '8601 Edison Dr Ste C, Huntington Beach, CA 92646',
+  type: 'Recycling Center',
+
+  acceptedItemIds: [
+    'phones-tablets',
+    'laptops-computers',
+    'tvs-monitors',
+    'cables-chargers',
+    'small-electronics-accessories',
+    'small-appliances',
+  ],
+
+  hours: 'Mon–Fri 9 AM–5 PM; Sat 9 AM–4 PM',
+
+  website:
+    'https://beachsiderecycling.com/',
+},
+{
+  id: 'cvs-newport-beach-medication',
+  name: 'CVS Pharmacy - Newport Beach',
+  shortName: 'CVS Newport Beach',
+  address: '1020 Irvine Ave, Newport Beach, CA 92660',
+  type: 'Medication Take-Back',
+
+  acceptedItemIds: [
+    'medication',
+  ],
+
+  hours: 'Open 24 hours; pharmacy lunch 11:30 AM–12 PM',
+
+  website:
+    'https://www.cvs.com/store-locator/cvs-pharmacy-locations/California/Newport-Beach/24-hour-pharmacies',
+},
+
+{
+  id: 'albertsons-tustin-collins-medication',
+  name: 'Albertsons Pharmacy - Tustin & Collins',
+  shortName: 'Albertsons Tustin & Collins',
+  address: '940 N Tustin Ave, Orange, CA 92867',
+  type: 'Medication Take-Back',
+
+  acceptedItemIds: [
+    'medication',
+  ],
+
+  hours: 'Mon–Fri 10 AM–1 PM, 2–7 PM; Sat–Sun 9 AM–1 PM, 1:30–5 PM',
+
+  website:
+    'https://local.pharmacy.albertsons.com/ca/orange/940-n-tustin-ave.html',
+},
+
+{
+  id: 'albertsons-chapman-jamboree-medication',
+  name: 'Albertsons Pharmacy - Chapman & Jamboree',
+  shortName: 'Albertsons Chapman & Jamboree',
+  address: '8440 E Chapman Ave, Orange, CA 92869',
+  type: 'Medication Take-Back',
+
+  acceptedItemIds: [
+    'medication',
+  ],
+
+  hours: 'Mon–Fri 8 AM–12:30 PM, 1–8 PM; Sat–Sun 9 AM–12:30 PM, 1–5 PM',
+
+  website:
+    'https://local.pharmacy.albertsons.com/ca/orange/8440-e-chapman-ave.html',
+},
+
+{
+  id: 'olinda-alpha-mattress-recycling',
+  name: 'Olinda Alpha Landfill',
+  shortName: 'Olinda Alpha',
+  address: '1942 N Valencia Ave, Brea, CA 92823',
+  type: 'Mattress Recycling',
+
+  acceptedItemIds: [
+    'mattresses',
+  ],
+
+  hours: 'Mon–Sat 7 AM–4 PM',
+
+  website:
+    'https://www.oclandfills.com/mattress',
+},
+
+{
+  id: 'prima-deshecha-mattress-recycling',
+  name: 'Prima Deshecha Landfill',
+  shortName: 'Prima Deshecha',
+  address: '32250 Avenida La Pata, San Juan Capistrano, CA 92675',
+  type: 'Mattress Recycling',
+
+  acceptedItemIds: [
+    'mattresses',
+  ],
+
+  hours: 'Mon–Sat 7 AM–5 PM',
+
+  website:
+    'https://www.oclandfills.com/mattress',
+},
+
+{
+  id: 'treadwell-tires-huntington-beach',
+  name: 'Treadwell Tires',
+  shortName: 'Treadwell Tires',
+  address: '5770 Research Dr, Huntington Beach, CA 92649',
+  type: 'Tire Recycling',
+
+  acceptedItemIds: [
+    'tires',
+  ],
+
+  hours: 'Mon–Fri 7 AM–3:30 PM',
+
+  website:
+    'https://calrecycle.ca.gov/tires/facilities/',
+},
+
+{
+  id: 'ecology-tire-huntington-beach',
+  name: 'Ecology Tire Inc.',
+  shortName: 'Ecology Tire',
+  address: '18811 Gothard St, Huntington Beach, CA 92648',
+  type: 'Tire Recycling',
+
+  acceptedItemIds: [
+    'tires',
+  ],
+
+  hours: 'Mon–Fri 7 AM–2 PM',
+
+  website:
+    'https://calrecycle.ca.gov/tires/facilities/',
 },
 ]
 
@@ -1988,6 +2225,49 @@ if (isListOpen) {
           })}
         </div>
       </section>
+      <section className="instructions">
+        <h2>How it works</h2>
+        <div className="steps-grid">
+          <div className="step">
+            <span className="step-number">01</span>
+            <h3>Find an item</h3>
+            <p>Search for an item or browse through the disposal categories.</p>
+          </div>
+
+          <div className="step">
+            <span className="step-number">02</span>
+            <h3>Follow the steps</h3>
+            <p>Read through the disposal instructions and save items to your disposal list.</p>
+          </div>
+
+          <div className="step">
+            <span className="step-number">03</span>
+            <h3>Find a location</h3>
+            <p>Find locations that accept items from your saved list.</p>
+          </div>
+        </div>
+      </section>
+      <section className="about-section" id="about">
+        <h2>About SafeDispose</h2>
+        <p>
+          SafeDispose is an independent project created to help Orange County residents find clear information on how to properly dispose of common household
+          items. It provides step-by-step instructions, safety guidance, and official sources, along with a disposal list that helps users find
+          disposal locations for their items.
+        </p>
+      </section>
+      <footer className="site-footer">
+        <div className="footer-top">
+          <div className="footer-info">
+            <h3>SafeDispose</h3>
+          </div>
+          <p className="footer-copyright">© 2026 SafeDispose</p>
+        </div>
+
+        <p className="footer-disclaimer">
+          SafeDispose is not affiliated with Orange County government. Collection hours and accepted items may change. Confirm 
+          details with the location before visiting.
+        </p>
+      </footer>
     </main>
   )
 }
