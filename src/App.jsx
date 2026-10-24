@@ -1911,6 +1911,7 @@ function App() {
       JSON.stringify(disposalListItemIds),
     )
   }, [disposalListItemIds])
+  const [showAllLocations, setShowAllLocations] = useState(false)
   const currentEntry = catalog.find((entry) => entry.id === currentEntryId)
   const mainCategories = catalog.filter((entry) => entry.parentId === null)
   const subCategories = catalog.filter((entry) => entry.parentId === currentEntryId)
@@ -1919,6 +1920,8 @@ function App() {
     const matchingItems = disposalListItems.filter((item) => location.acceptedItemIds.includes(item.id))
     return {...location, matchingItems,}
   }).filter((location) => location.matchingItems.length > 0).sort((a, b) => b.matchingItems.length - a.matchingItems.length)
+  const displayedLocations = showAllLocations ? matchedLocations : matchedLocations.slice(0,4)
+  const unmatchedItems = disposalListItems.filter((item) => !disposalLocations.some((location) => location.acceptedItemIds.includes(item.id)))
   const normalizedSearch = searchQuery.trim().toLowerCase()
 
   // Search feature code
@@ -2022,7 +2025,7 @@ if (isListOpen) {
           <h2>Where to take your items:</h2>
 
           <div className="location-list">
-            {matchedLocations.map((location) => (
+            {displayedLocations.map((location) => (
               <article className="location-card" key={location.id}>
                 <h3>{location.name}</h3>
                 <p className='location-address'>{location.address}</p>
@@ -2056,6 +2059,39 @@ if (isListOpen) {
                   </a>
                 </div>
               </article>
+            ))}
+            </div>
+            {matchedLocations.length > 4 && (
+              <button
+                type='button'
+                className='show-more-button'
+                onClick={() => setShowAllLocations(!showAllLocations)}
+              >
+                {showAllLocations ? "Show less" : "Show more"}
+              </button>
+            )}
+        </section>
+      )}
+        {unmatchedItems.length > 0 && (
+        <section className="unmatched-section">
+          <h2>Other items in your list</h2>
+          <p>
+            No matching drop-off locations are listed for these items. View their disposal instructions for other options.
+          </p>
+          <div className="unmatched-items">
+            {unmatchedItems.map((item) => (
+              <button
+                key={item.id}
+                type="button"
+                className="unmatched-item"
+                onClick={() => {
+                  setCurrentEntryId(item.id)
+                  setIsListOpen(false)
+                }}
+              >
+                <span>{item.name}</span>
+                <span className="unmatched-link">View instructions →</span>
+              </button>
             ))}
           </div>
         </section>
