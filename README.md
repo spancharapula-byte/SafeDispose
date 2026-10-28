@@ -1,16 +1,29 @@
-# React + Vite
+# SafeDispose
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+SafeDispose is a web application that helps Orange County residents figure out how to properly dispose of common household items, including batteries, electronics, light bulbs, paint, medication, and appliances.
 
-Currently, two official plugins are available:
+Live Website: https://safedispose.netlify.app 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Why I Built It
 
-## React Compiler
+Disposing of household items isn't always straightforward. Many items cannot simply be thrown into the trash, and finding the correct disposal instructions and disposal collection locations can be confusing. I built SafeDispose to make this information easier to find in one place.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the ESLint configuration
+- **Search and Categories:** Search for items or browse categories to find disposal instructions.
+- **Disposal Guidance:** View step-by-step instructions, safety precautions, and official sources for each item.
+- **Disposal List:** Save multiple items you want to dispose of in one list, which is stored locally in your browser.
+- **Collection Location Matching:** Find collection locations that accept your saved items, ranked by how many items each location accepts.
+- **Directions:** Open Google Maps directions and official information for each collection location.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## How To Use
+
+Visit the live website and search for an item or browse through the categories. Open an item to read its disposal information, then save it to your disposal list. Once you've added your items, open your disposal list to view matching collection locations, along with official information and directions.
+
+## Built With
+
+**React, JavaScript, CSS, and Vite**
+
+The application uses browser localStorage to save disposal lists and a structured catalog of items and collection locations using unique IDs to determine which locations accept each item.
+
+
